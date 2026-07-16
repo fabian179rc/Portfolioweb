@@ -3,6 +3,7 @@ import Cursor from "./components/Cursor";
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Ticker from "./components/Ticker";
+import Metricas from "./components/Metricas";
 import megaPackImg from "./assets/products/mega-pack.webp";
 import capacitacionesImg from "./assets/products/capacitaciones.webp";
 import auditoriasImg from "./assets/products/auditorias.webp";
@@ -509,6 +510,7 @@ export default function CatalogoProductosProfesional() {
       <Nav />
       <Hero />
       <Ticker />
+      <Metricas />
       <div
         style={{
           background: "#efe6d3",
