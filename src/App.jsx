@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Cursor from "./components/Cursor";
+import Nav from "./components/Nav";
 import megaPackImg from "./assets/products/mega-pack.webp";
 import capacitacionesImg from "./assets/products/capacitaciones.webp";
 import auditoriasImg from "./assets/products/auditorias.webp";
@@ -503,6 +504,7 @@ export default function CatalogoProductosProfesional() {
       }}
     >
       <Cursor />
+      <Nav />
       <div
         style={{
           background: "#efe6d3",
