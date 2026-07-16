@@ -221,3 +221,46 @@ body:has(.cursor-dot) button {
   gap: 1rem;
   flex-wrap: wrap;
 }
+
+/* Ticker */
+.ticker {
+  background: var(--accent);
+  overflow: hidden;
+  padding: 0.85rem 0;
+}
+
+.ticker__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+.ticker:hover .ticker__track {
+  animation-play-state: paused;
+}
+
+.ticker__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--bg-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0 1rem;
+  white-space: nowrap;
+}
+
+.ticker__dot {
+  opacity: 0.5;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
