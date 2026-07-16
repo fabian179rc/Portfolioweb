@@ -7,6 +7,7 @@ import Metricas from "./components/Metricas";
 import Portfolio from "./components/Portfolio";
 import Servicios from "./components/Servicios";
 import Filosofia from "./components/Filosofia";
+import Contacto from "./components/Contacto";
 import megaPackImg from "./assets/products/mega-pack.webp";
 import capacitacionesImg from "./assets/products/capacitaciones.webp";
 import auditoriasImg from "./assets/products/auditorias.webp";
@@ -517,6 +518,7 @@ export default function CatalogoProductosProfesional() {
       <Portfolio />
       <Servicios />
       <Filosofia />
+      <Contacto />
       <div
         style={{
           background: "#efe6d3",
