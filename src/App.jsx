@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Cursor from "./components/Cursor";
 import megaPackImg from "./assets/products/mega-pack.webp";
 import capacitacionesImg from "./assets/products/capacitaciones.webp";
 import auditoriasImg from "./assets/products/auditorias.webp";
@@ -501,6 +502,7 @@ export default function CatalogoProductosProfesional() {
         background: "linear-gradient(135deg, #efe6d3 0%, #e9dfc7 100%)",
       }}
     >
+      <Cursor />
       <div
         style={{
           background: "#efe6d3",
