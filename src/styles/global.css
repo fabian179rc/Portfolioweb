@@ -623,3 +623,60 @@ body:has(.cursor-dot) button {
     padding-top: 0;
   }
 }
+
+/* Footer */
+.footer {
+  padding: 3rem 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer__logo {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.footer__tagline {
+  color: var(--text-primary);
+  opacity: 0.6;
+  font-size: 0.85rem;
+  margin: 0.25rem 0 0;
+}
+
+.footer__links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer__links a {
+  color: var(--text-primary);
+  opacity: 0.75;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.footer__links a:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.footer__legal {
+  text-align: right;
+  color: var(--text-primary);
+  opacity: 0.5;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 640px) {
+  .footer__legal {
+    text-align: left;
+  }
+}
