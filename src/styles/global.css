@@ -192,3 +192,32 @@ body:has(.cursor-dot) button {
     display: none;
   }
 }
+
+/* Hero */
+.hero {
+  padding: 8rem 0 6rem;
+}
+
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-serif);
+  font-size: clamp(2.75rem, 7vw, 5.5rem);
+  line-height: 1.05;
+  margin: 1rem 0 2rem;
+}
+
+.hero__subtitle {
+  max-width: 46ch;
+  color: var(--text-primary);
+  opacity: 0.75;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+
+.hero__ctas {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
