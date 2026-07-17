@@ -24,17 +24,20 @@
 ### Task 1: Design tokens, base styles, and app shell wiring
 
 **Files:**
+
 - Create: `src/styles/tokens.css`
 - Create: `src/styles/global.css`
 - Modify: `index.html`
 - Modify: `src/main.jsx`
 
 **Interfaces:**
+
 - Produces: CSS custom properties (`--bg-primary`, `--text-primary`, `--accent`, `--bg-secondary`, `--border-subtle`, `--font-serif`, `--font-sans`) available globally. Shared utility classes `.container`, `.reveal`/`.is-visible`, `.section-title`, `.section-subtitle`, `.btn`, `.btn--primary`, `.btn--ghost` available to every later component.
 
 - [ ] **Step 1: Create the token stylesheet**
 
 `src/styles/tokens.css`:
+
 ```css
 :root {
   --bg-primary: #0a0a0a;
@@ -43,14 +46,16 @@
   --bg-secondary: #1a1a1a;
   --border-subtle: #2a2a2a;
 
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans:
+    "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 ```
 
 - [ ] **Step 2: Create the base global stylesheet**
 
 `src/styles/global.css`:
+
 ```css
 * {
   margin: 0;
@@ -84,7 +89,9 @@ body {
 .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
 }
 
 .reveal.is-visible {
@@ -112,7 +119,10 @@ body {
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
-  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease,
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
     border-color 0.2s ease;
 }
 
@@ -175,17 +185,17 @@ body {
 - [ ] **Step 4: Wire the stylesheets into the app** — modify `src/main.jsx`:
 
 ```jsx
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './styles/tokens.css'
-import './styles/global.css'
-import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./styles/tokens.css";
+import "./styles/global.css";
+import App from "./App.jsx";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-)
+);
 ```
 
 - [ ] **Step 5: Verify**
@@ -205,11 +215,13 @@ git commit -m "feat: add SeronStudio design tokens and base styles"
 ### Task 2: Static content data layer
 
 **Files:**
+
 - Create: `src/data/config.js`
 - Create: `src/data/portfolio.js`
 - Create: `src/data/servicios.js`
 
 **Interfaces:**
+
 - Produces: `CONTACT` object (`{ email, whatsappNumber, whatsappUrl }`), `WEB3FORMS_ACCESS_KEY` string, `portfolio` array (each item: `{ numero, industria, nombre, descripcion, gradient, url }`), `servicios` array (each item: `{ numero, nombre }`). Later components (Hero, Portfolio, Servicios, Contacto, Footer) import from these exact paths and names.
 
 - [ ] **Step 1: Create `src/data/config.js`**
@@ -317,10 +329,12 @@ git commit -m "feat: add SeronStudio static content data"
 ### Task 3: Custom cursor
 
 **Files:**
+
 - Create: `src/components/Cursor.jsx`
 - Modify: `src/styles/global.css` (append cursor styles)
 
 **Interfaces:**
+
 - Produces: default export `Cursor` (no props). Later consumed by `App.jsx` in Task 13.
 
 - [ ] **Step 1: Create `src/components/Cursor.jsx`**
@@ -333,9 +347,7 @@ export default function Cursor() {
   const [enabled, setEnabled] = useState(false);
 
   useEffect(() => {
-    setEnabled(
-      window.matchMedia("(hover: hover) and (pointer: fine)").matches
-    );
+    setEnabled(window.matchMedia("(hover: hover) and (pointer: fine)").matches);
   }, []);
 
   useEffect(() => {
@@ -378,7 +390,6 @@ export default function Cursor() {
 - [ ] **Step 2: Append cursor styles to `src/styles/global.css`**
 
 ```css
-
 /* Cursor */
 body:has(.cursor-dot),
 body:has(.cursor-dot) a,
@@ -398,8 +409,12 @@ body:has(.cursor-dot) button {
   background: var(--accent);
   pointer-events: none;
   z-index: 9999;
-  transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease,
-    background 0.2s ease, border 0.2s ease;
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    margin 0.2s ease,
+    background 0.2s ease,
+    border 0.2s ease;
   will-change: transform;
 }
 
@@ -432,10 +447,12 @@ git commit -m "feat: add custom cursor component"
 ### Task 4: Navigation bar
 
 **Files:**
+
 - Create: `src/components/Nav.jsx`
 - Modify: `src/styles/global.css` (append nav styles)
 
 **Interfaces:**
+
 - Produces: default export `Nav` (no props). Anchors to `#top`, `#portfolio`, `#servicios`, `#filosofia`, `#consulta` — these IDs are produced by Hero (Task 5), Portfolio (Task 8), Servicios (Task 9), Filosofia (Task 10), Contacto (Task 11) respectively.
 
 - [ ] **Step 1: Create `src/components/Nav.jsx`**
@@ -486,7 +503,6 @@ export default function Nav() {
 - [ ] **Step 2: Append nav styles to `src/styles/global.css`**
 
 ```css
-
 /* Nav */
 .nav {
   position: sticky;
@@ -494,7 +510,9 @@ export default function Nav() {
   z-index: 100;
   background: transparent;
   border-bottom: 1px solid transparent;
-  transition: background 0.4s ease, border-color 0.4s ease,
+  transition:
+    background 0.4s ease,
+    border-color 0.4s ease,
     backdrop-filter 0.4s ease;
 }
 
@@ -529,7 +547,9 @@ export default function Nav() {
   text-decoration: none;
   font-size: 0.9rem;
   opacity: 0.85;
-  transition: opacity 0.2s ease, color 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease;
 }
 
 .nav__links a:hover {
@@ -544,7 +564,9 @@ export default function Nav() {
   border-radius: 2px;
   text-decoration: none;
   font-size: 0.85rem;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
 .nav__cta:hover {
@@ -578,11 +600,13 @@ git commit -m "feat: add sticky nav bar"
 ### Task 5: Scroll-reveal hook + Hero section
 
 **Files:**
+
 - Create: `src/hooks/useScrollReveal.js`
 - Create: `src/components/Hero.jsx`
 - Modify: `src/styles/global.css` (append hero styles)
 
 **Interfaces:**
+
 - Produces: `useScrollReveal(options)` returning `[ref, isVisible]` (from `src/hooks/useScrollReveal.js`), and `revealClass(isVisible, extra)` returning a className string. Both are imported by every later section component (Metricas, Portfolio, Servicios, Filosofia, Contacto).
 - Produces: default export `Hero` (no props), rendering `<section id="top">`.
 - Consumes: `CONTACT.whatsappUrl` from `src/data/config.js` (Task 2).
@@ -592,7 +616,10 @@ git commit -m "feat: add sticky nav bar"
 ```js
 import { useEffect, useRef, useState } from "react";
 
-export function useScrollReveal({ threshold = 0.15, rootMargin = "0px 0px -60px 0px" } = {}) {
+export function useScrollReveal({
+  threshold = 0.15,
+  rootMargin = "0px 0px -60px 0px",
+} = {}) {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -607,7 +634,7 @@ export function useScrollReveal({ threshold = 0.15, rootMargin = "0px 0px -60px 
           observer.unobserve(node);
         }
       },
-      { threshold, rootMargin }
+      { threshold, rootMargin },
     );
 
     observer.observe(node);
@@ -634,7 +661,7 @@ export default function Hero() {
   return (
     <section id="top" className="hero" ref={ref}>
       <div className="container hero__inner">
-        <p className={revealClass(isVisible)}>Aceptando proyectos — 2025</p>
+        <p className={revealClass(isVisible)}>Aceptando proyectos — 2026</p>
         <h1 className="hero__title">
           <span
             className={revealClass(isVisible, "hero__line")}
@@ -660,8 +687,8 @@ export default function Hero() {
           style={{ transitionDelay: "0.55s" }}
         >
           Un estudio privado que diseña y desarrolla experiencias digitales a
-          medida para negocios en Argentina y Latinoamérica. Sin plantillas.
-          Sin intermediarios.
+          medida para negocios en Argentina y Latinoamérica. Sin plantillas. Sin
+          intermediarios.
         </p>
         <div
           className={revealClass(isVisible, "hero__ctas")}
@@ -688,7 +715,6 @@ export default function Hero() {
 - [ ] **Step 3: Append hero styles to `src/styles/global.css`**
 
 ```css
-
 /* Hero */
 .hero {
   padding: 8rem 0 6rem;
@@ -724,7 +750,7 @@ export default function Hero() {
 - [ ] **Step 5: Verify**
 
 Run: `npm run dev`, open the page, refresh.
-Expected: on load, the "Aceptando proyectos — 2025" tag, then the three title lines, then the subtitle, then the two CTA buttons animate in with a staggered fade+slide-up (each ~150ms after the previous). "WhatsApp Directo →" opens `https://wa.me/5493412665657` in a new tab. "Ver Portfolio →" points to `#portfolio` (target doesn't exist yet — fine for now).
+Expected: on load, the "Aceptando proyectos — 2026" tag, then the three title lines, then the subtitle, then the two CTA buttons animate in with a staggered fade+slide-up (each ~150ms after the previous). "WhatsApp Directo →" opens `https://wa.me/5493412665657` in a new tab. "Ver Portfolio →" points to `#portfolio` (target doesn't exist yet — fine for now).
 
 - [ ] **Step 6: Commit**
 
@@ -738,10 +764,12 @@ git commit -m "feat: add scroll-reveal hook and hero section"
 ### Task 6: Ticker
 
 **Files:**
+
 - Create: `src/components/Ticker.jsx`
 - Modify: `src/styles/global.css` (append ticker styles)
 
 **Interfaces:**
+
 - Produces: default export `Ticker` (no props).
 
 - [ ] **Step 1: Create `src/components/Ticker.jsx`**
@@ -776,7 +804,6 @@ export default function Ticker() {
 - [ ] **Step 2: Append ticker styles to `src/styles/global.css`**
 
 ```css
-
 /* Ticker */
 .ticker {
   background: var(--accent);
@@ -840,11 +867,13 @@ git commit -m "feat: add infinite ticker band"
 ### Task 7: Counter hook + Métricas section
 
 **Files:**
+
 - Create: `src/hooks/useCounter.js`
 - Create: `src/components/Metricas.jsx`
 - Modify: `src/styles/global.css` (append métricas styles)
 
 **Interfaces:**
+
 - Produces: `useCounter(target, { duration, startWhen })` returning a number, from `src/hooks/useCounter.js`.
 - Produces: default export `Metricas` (no props).
 - Consumes: `useScrollReveal`/`revealClass` from Task 5.
@@ -889,8 +918,8 @@ import { useScrollReveal, revealClass } from "../hooks/useScrollReveal";
 import { useCounter } from "../hooks/useCounter";
 
 const METRICAS = [
-  { target: 12, suffix: "+", label: "Proyectos" },
-  { target: 8, suffix: "", label: "Industrias" },
+  { target: 400, suffix: "+", label: "Proyectos" },
+  { target: 13, suffix: "", label: "Industrias" },
   { target: 100, suffix: "%", label: "A Medida" },
   { target: 1, suffix: ":1", label: "Atención Directa" },
 ];
@@ -926,7 +955,6 @@ export default function Metricas() {
 - [ ] **Step 3: Append métricas styles to `src/styles/global.css`**
 
 ```css
-
 /* Metricas */
 .metricas {
   padding: 4rem 0;
@@ -1011,11 +1039,13 @@ git commit -m "feat: add counter hook and metricas section"
 ### Task 8: Portfolio grid
 
 **Files:**
+
 - Create: `src/components/PortfolioCard.jsx`
 - Create: `src/components/Portfolio.jsx`
 - Modify: `src/styles/global.css` (append portfolio styles)
 
 **Interfaces:**
+
 - Produces: default export `PortfolioCard` (prop: `caso` — one item shape from `src/data/portfolio.js`). Default export `Portfolio` (no props), rendering `<section id="portfolio">`.
 - Consumes: `portfolio` from `src/data/portfolio.js` (Task 2), `useScrollReveal`/`revealClass` from Task 5.
 
@@ -1084,7 +1114,6 @@ export default function Portfolio() {
 - [ ] **Step 3: Append portfolio styles to `src/styles/global.css`**
 
 ```css
-
 /* Portfolio */
 .portfolio {
   padding: 6rem 0;
@@ -1170,7 +1199,9 @@ export default function Portfolio() {
   font-size: 0.85rem;
   opacity: 0;
   transform: translateY(6px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .portfolio-card:hover {
@@ -1212,10 +1243,12 @@ git commit -m "feat: add portfolio grid section"
 ### Task 9: Servicios section
 
 **Files:**
+
 - Create: `src/components/Servicios.jsx`
 - Modify: `src/styles/global.css` (append servicios styles)
 
 **Interfaces:**
+
 - Produces: default export `Servicios` (no props), rendering `<section id="servicios">`.
 - Consumes: `servicios` from `src/data/servicios.js` (Task 2), `useScrollReveal`/`revealClass` from Task 5.
 
@@ -1252,7 +1285,6 @@ export default function Servicios() {
 - [ ] **Step 2: Append servicios styles to `src/styles/global.css`**
 
 ```css
-
 /* Servicios */
 .servicios {
   padding: 6rem 0;
@@ -1292,7 +1324,9 @@ export default function Servicios() {
   font-family: var(--font-sans);
   opacity: 0;
   transform: translateX(-8px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .servicios__item:hover {
@@ -1330,10 +1364,12 @@ git commit -m "feat: add servicios list section"
 ### Task 10: Filosofía section
 
 **Files:**
+
 - Create: `src/components/Filosofia.jsx`
 - Modify: `src/styles/global.css` (append filosofía styles)
 
 **Interfaces:**
+
 - Produces: default export `Filosofia` (no props), rendering `<section id="filosofia">`.
 - Consumes: `useScrollReveal`/`revealClass` from Task 5.
 
@@ -1360,9 +1396,9 @@ export default function Filosofia() {
           <h2 className="section-title">El estándar es el trabajo mismo.</h2>
           <p>
             Trabajo directamente con cada cliente — sin capas, sin
-            intermediarios. Cada proyecto comienza con una pregunta: ¿qué
-            merece sentir esta marca? La respuesta da forma a cada pixel,
-            cada línea de código y cada conversión.
+            intermediarios. Cada proyecto comienza con una pregunta: ¿qué merece
+            sentir esta marca? La respuesta da forma a cada pixel, cada línea de
+            código y cada conversión.
           </p>
         </div>
         <ul className="filosofia__lista">
@@ -1382,7 +1418,6 @@ export default function Filosofia() {
 - [ ] **Step 2: Append filosofía styles to `src/styles/global.css`**
 
 ```css
-
 /* Filosofia */
 .filosofia {
   padding: 6rem 0;
@@ -1454,10 +1489,12 @@ git commit -m "feat: add filosofia section"
 ### Task 11: Contact section with Web3Forms
 
 **Files:**
+
 - Create: `src/components/Contacto.jsx`
 - Modify: `src/styles/global.css` (append contacto styles)
 
 **Interfaces:**
+
 - Produces: default export `Contacto` (no props), rendering `<section id="consulta">`.
 - Consumes: `CONTACT`, `WEB3FORMS_ACCESS_KEY` from `src/data/config.js` (Task 2), `useScrollReveal`/`revealClass` from Task 5.
 
@@ -1574,9 +1611,7 @@ export default function Contacto() {
           >
             WhatsApp Directo →
           </a>
-          <p className="contacto__nota">
-            Respuesta personal en menos de 24hs.
-          </p>
+          <p className="contacto__nota">Respuesta personal en menos de 24hs.</p>
         </div>
       </div>
     </section>
@@ -1587,7 +1622,6 @@ export default function Contacto() {
 - [ ] **Step 2: Append contacto styles to `src/styles/global.css`**
 
 ```css
-
 /* Contacto */
 .contacto {
   padding: 6rem 0;
@@ -1688,10 +1722,12 @@ git commit -m "feat: add contact section with Web3Forms integration"
 ### Task 12: Footer
 
 **Files:**
+
 - Create: `src/components/Footer.jsx`
 - Modify: `src/styles/global.css` (append footer styles)
 
 **Interfaces:**
+
 - Produces: default export `Footer` (no props).
 
 - [ ] **Step 1: Create `src/components/Footer.jsx`**
@@ -1720,7 +1756,7 @@ export default function Footer() {
           ))}
         </nav>
         <div className="footer__legal">
-          <p>© 2025 SeronStudio. Todos los derechos reservados.</p>
+          <p>© 2026 SeronStudio. Todos los derechos reservados.</p>
           <p>Por cita únicamente.</p>
         </div>
       </div>
@@ -1732,7 +1768,6 @@ export default function Footer() {
 - [ ] **Step 2: Append footer styles to `src/styles/global.css`**
 
 ```css
-
 /* Footer */
 .footer {
   padding: 3rem 0;
@@ -1812,9 +1847,11 @@ git commit -m "feat: add footer section"
 By this point `src/App.jsx` has been incrementally patched with temporary imports/renders on top of the old HyS catalog body. This task deletes all of that leftover catalog code and leaves only the clean SeronStudio assembly.
 
 **Files:**
+
 - Modify: `src/App.jsx` (full rewrite)
 
 **Interfaces:**
+
 - Consumes: every component from Tasks 3–12 (`Cursor`, `Nav`, `Hero`, `Ticker`, `Metricas`, `Portfolio`, `Servicios`, `Filosofia`, `Contacto`, `Footer`).
 
 - [ ] **Step 1: Replace the entire contents of `src/App.jsx`**

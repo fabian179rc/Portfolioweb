@@ -2,8 +2,8 @@ import { useScrollReveal, revealClass } from "../hooks/useScrollReveal";
 import { useCounter } from "../hooks/useCounter";
 
 const METRICAS = [
-  { target: 12, suffix: "+", label: "Proyectos" },
-  { target: 8, suffix: "", label: "Industrias" },
+  { target: 400, suffix: "+", label: "Proyectos" },
+  { target: 13, suffix: "", label: "Industrias" },
   { target: 100, suffix: "%", label: "A Medida" },
   { target: 1, suffix: ":1", label: "Atención Directa" },
 ];

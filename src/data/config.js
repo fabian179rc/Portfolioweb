@@ -4,6 +4,4 @@ export const CONTACT = {
   whatsappUrl: "https://wa.me/5493412665657",
 };
 
-// TODO(user): replace with your real Web3Forms access key from
-// https://web3forms.com before the contact form can send real email.
-export const WEB3FORMS_ACCESS_KEY = "REPLACE_WITH_YOUR_WEB3FORMS_ACCESS_KEY";
+export const WEB3FORMS_ACCESS_KEY = "0223b2bd-e7ea-489a-b697-f5069f5c3532";

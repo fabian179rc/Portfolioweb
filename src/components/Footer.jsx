@@ -21,7 +21,7 @@ export default function Footer() {
           ))}
         </nav>
         <div className="footer__legal">
-          <p>© 2025 SeronStudio. Todos los derechos reservados.</p>
+          <p>© 2026 SeronStudio. Todos los derechos reservados.</p>
           <p>Por cita únicamente.</p>
         </div>
       </div>

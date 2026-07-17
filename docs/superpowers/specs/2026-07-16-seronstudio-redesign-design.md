@@ -60,8 +60,8 @@ Se elimina el contenido de `src/App.jsx` actual (catálogo HyS) y los assets de 
 --bg-secondary: #1a1a1a;
 --border-subtle: #2a2a2a;
 
---font-serif: 'Playfair Display', Georgia, serif;   /* títulos */
---font-sans: 'DM Sans', -apple-system, sans-serif;  /* cuerpo */
+--font-serif: "Playfair Display", Georgia, serif; /* títulos */
+--font-sans: "DM Sans", -apple-system, sans-serif; /* cuerpo */
 ```
 
 Ambas fuentes se cargan desde Google Fonts en `index.html`, reemplazando el link actual a Inter/Lora. El `<title>` y meta del `index.html` se actualizan a SeronStudio.
@@ -69,14 +69,14 @@ Ambas fuentes se cargan desde Google Fonts en `index.html`, reemplazando el link
 ## Secciones (contenido = copy del prompt del usuario, sin reinterpretar)
 
 1. **Nav** — sticky, transparente → fondo oscuro con blur al hacer scroll. Logo "SeronStudio" en serif, links a Portafolio/Servicios/Filosofía/Consulta, CTA "Iniciar Proyecto →" con borde dorado.
-2. **Hero** — etiqueta "Aceptando proyectos — 2025", título de 3 líneas con slide-up secuencial al cargar ("Sitios web / que convierten. / Hechos a mano."), subtítulo, dos CTAs ("Ver Portfolio →", "WhatsApp Directo →" apuntando al wa.me real).
+2. **Hero** — etiqueta "Aceptando proyectos — 2026", título de 3 líneas con slide-up secuencial al cargar ("Sitios web / que convierten. / Hechos a mano."), subtítulo, dos CTAs ("Ver Portfolio →", "WhatsApp Directo →" apuntando al wa.me real).
 3. **Ticker** — banda dorada con texto negro en loop horizontal infinito (contenido duplicado para el loop), pausa al hover.
-4. **Métricas** — 4 counters ("12+ Proyectos", "8 Industrias", "100% A Medida", "1:1 Atención Directa"), 4 cols desktop / 2×2 mobile, líneas divisoras animadas entre columnas.
+4. **Métricas** — 4 counters ("400+ Proyectos", "13 Industrias", "100% A Medida", "1:1 Atención Directa"), 4 cols desktop / 2×2 mobile, líneas divisoras animadas entre columnas.
 5. **Portfolio** — grid 2 columnas desktop (1 columna mobile). Cada card: número decorativo de fondo (opacity 0.05), etiqueta de industria, nombre en serif, descripción 2 líneas, gradiente CSS con overlay oscuro, hover con leve brillo + botón "Ver Proyecto →". Los 6 casos placeholder del prompt.
 6. **Servicios** — lista numerada (5 ítems) con línea separadora animada y flecha dorada deslizante al hover.
 7. **Filosofía** — layout 2 columnas: texto grande a la izquierda (título + párrafo del prompt), lista de 5 diferenciales con punto dorado a la derecha.
 8. **Contacto** — formulario numerado (Nombre, Email, Tipo de Proyecto, Contame sobre tu negocio) que envía vía Web3Forms; estados de carga/éxito/error. WhatsApp directo al lado. Nota "Respuesta personal en menos de 24hs."
-9. **Footer** — logo, tagline, links, copyright 2025, "Por cita únicamente."
+9. **Footer** — logo, tagline, links, copyright 2026, "Por cita únicamente."
 
 ## Animaciones
 

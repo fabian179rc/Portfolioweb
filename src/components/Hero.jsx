@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section id="top" className="hero" ref={ref}>
       <div className="container hero__inner">
-        <p className={revealClass(isVisible)}>Aceptando proyectos — 2025</p>
+        <p className={revealClass(isVisible)}>Aceptando proyectos — 2026</p>
         <h1 className="hero__title">
           <span
             className={revealClass(isVisible, "hero__line")}
@@ -33,8 +33,8 @@ export default function Hero() {
           style={{ transitionDelay: "0.55s" }}
         >
           Un estudio privado que diseña y desarrolla experiencias digitales a
-          medida para negocios en Argentina y Latinoamérica. Sin plantillas.
-          Sin intermediarios.
+          medida para negocios en Argentina y Latinoamérica. Sin plantillas. Sin
+          intermediarios.
         </p>
         <div
           className={revealClass(isVisible, "hero__ctas")}
