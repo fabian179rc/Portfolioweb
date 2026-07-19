@@ -353,14 +353,14 @@ body:has(.cursor-dot) button {
 
 .portfolio-card__media {
   position: relative;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 6 / 5;
   overflow: hidden;
 }
 
 .portfolio-card__image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display: block;
   transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
