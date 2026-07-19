@@ -1,4 +1,4 @@
-import emergenciasImg from "../assets/portfolio/emergencias-hys.webp";
+import emergenciasImg from "../assets/portfolio/emergencias-hys.png";
 
 export const portfolio = [
   {
