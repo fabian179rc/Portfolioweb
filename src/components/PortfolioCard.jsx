@@ -13,6 +13,13 @@ export default function PortfolioCard({ caso }) {
       className={revealClass(isVisible, "portfolio-card")}
       style={{ background: caso.gradient }}
     >
+      {caso.image && (
+        <img
+          className="portfolio-card__image"
+          src={caso.image}
+          alt={caso.nombre}
+        />
+      )}
       <span className="portfolio-card__numero" aria-hidden="true">
         {caso.numero}
       </span>

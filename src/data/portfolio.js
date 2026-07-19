@@ -1,12 +1,15 @@
+import emergenciasImg from "../assets/portfolio/emergencias-hys.webp";
+
 export const portfolio = [
   {
     numero: "01",
-    industria: "Gastronomía",
-    nombre: "El Rincón del Sabor",
+    industria: "Higiene y Seguridad",
+    nombre: "Sistema Maestro de Emergencias HyS",
     descripcion:
-      "Una carta digital con reservas online y una identidad visual que transmite calidez de barrio y prolijidad profesional.",
+      "Landing de venta para un sistema de gestión de emergencias: storytelling de riesgo, prueba social y checkout con urgencia real.",
     gradient: "linear-gradient(135deg, #3a2317 0%, #1a1008 100%)",
-    url: "#",
+    image: emergenciasImg,
+    url: "https://maestrodeemergencias.tupuntodigital.shop/",
   },
   {
     numero: "02",
