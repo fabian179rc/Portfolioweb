@@ -1,5 +1,6 @@
 import emergenciasImg from "../assets/portfolio/emergencias-hys.png";
 import heladosPandaImg from "../assets/portfolio/helados-panda.png";
+import ecosistemaImg from "../assets/portfolio/ecosistema-hys.png";
 
 export const portfolio = [
   {
@@ -26,11 +27,13 @@ export const portfolio = [
   },
   {
     numero: "03",
-    industria: "Salud",
-    nombre: "La Clínica Familiar",
+    industria: "Higiene y Seguridad",
+    nombre: "Ecosistema de Sistemas HyS",
     descripcion:
-      "Turnos online y una experiencia clara para pacientes de todas las edades, sin fricción ni tecnicismos.",
+      "Catálogo hub que centraliza los sistemas HyS en una sola landing, con jerarquía clara entre productos disponibles y próximos lanzamientos.",
     gradient: "linear-gradient(135deg, #234035 0%, #0e1a15 100%)",
+    image: ecosistemaImg,
+    aspectRatio: "1535 / 945",
     url: "#",
   },
   {
