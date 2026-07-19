@@ -11,18 +11,19 @@ export default function PortfolioCard({ caso }) {
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
       className={revealClass(isVisible, "portfolio-card")}
-      style={{ background: caso.gradient }}
     >
-      {caso.image && (
-        <img
-          className="portfolio-card__image"
-          src={caso.image}
-          alt={caso.nombre}
-        />
-      )}
-      <span className="portfolio-card__numero" aria-hidden="true">
-        {caso.numero}
-      </span>
+      <div
+        className="portfolio-card__media"
+        style={{ background: caso.gradient }}
+      >
+        {caso.image && (
+          <img
+            className="portfolio-card__image"
+            src={caso.image}
+            alt={caso.nombre}
+          />
+        )}
+      </div>
       <div className="portfolio-card__body">
         <span className="portfolio-card__industria">{caso.industria}</span>
         <h3 className="portfolio-card__nombre">{caso.nombre}</h3>
