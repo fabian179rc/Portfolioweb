@@ -1,6 +1,7 @@
 import emergenciasImg from "../assets/portfolio/emergencias-hys.png";
 import heladosPandaImg from "../assets/portfolio/helados-panda.png";
 import ecosistemaImg from "../assets/portfolio/ecosistema-hys.png";
+import sistema360LashImg from "../assets/portfolio/sistema360lash.png";
 
 export const portfolio = [
   {
@@ -38,12 +39,14 @@ export const portfolio = [
   },
   {
     numero: "04",
-    industria: "Inmobiliaria",
-    nombre: "La Dirección Exclusiva",
+    industria: "Belleza",
+    nombre: "Sistema 360 Lash",
     descripcion:
-      "Fichas de propiedades en formato editorial que hacen que cada inmueble se sienta una oportunidad única.",
+      "Landing de venta para un sistema de gestión integral de lashistas: seis tomos, bonos operativos y checkout con planes escalonados.",
     gradient: "linear-gradient(135deg, #3d2f1a 0%, #1a130a 100%)",
-    url: "#",
+    image: sistema360LashImg,
+    aspectRatio: "1578 / 887",
+    url: "https://lash.tera-ventasonline.shop/",
   },
   {
     numero: "05",
