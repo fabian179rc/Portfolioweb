@@ -12,7 +12,10 @@ export default function Servicios() {
           {servicios.map((servicio) => (
             <li key={servicio.numero} className="servicios__item">
               <span className="servicios__numero">{servicio.numero}</span>
-              <span className="servicios__nombre">{servicio.nombre}</span>
+              <div className="servicios__texto">
+                <span className="servicios__nombre">{servicio.nombre}</span>
+                <p className="servicios__descripcion">{servicio.descripcion}</p>
+              </div>
               <span className="servicios__flecha" aria-hidden="true">
                 →
               </span>

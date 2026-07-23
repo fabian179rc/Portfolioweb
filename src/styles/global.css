@@ -533,12 +533,10 @@ body:has(.cursor-dot) button {
 
 .servicios__item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1.5rem;
   padding: 1.75rem 0;
   border-bottom: 1px solid var(--border-subtle);
-  font-family: var(--font-serif);
-  font-size: 1.75rem;
   color: var(--text-primary);
   transition: color 0.3s ease;
 }
@@ -549,8 +547,21 @@ body:has(.cursor-dot) button {
   color: var(--accent);
 }
 
-.servicios__nombre {
+.servicios__texto {
   flex: 1;
+}
+
+.servicios__nombre {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  display: block;
+}
+
+.servicios__descripcion {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin-top: 0.4rem;
 }
 
 .servicios__flecha {
@@ -571,7 +582,7 @@ body:has(.cursor-dot) button {
 }
 
 @media (max-width: 768px) {
-  .servicios__item {
+  .servicios__nombre {
     font-size: 1.25rem;
   }
 }
