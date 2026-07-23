@@ -14,20 +14,20 @@ export default function PortfolioCard({ caso }) {
         aspectRatio: caso.aspectRatio || "16 / 9",
       }}
     >
-      {caso.preview ? (
-        <iframe
-          className="portfolio-card__preview-frame"
-          src={caso.preview}
-          title={caso.nombre}
-          tabIndex={-1}
-          aria-hidden="true"
+      {caso.image ? (
+        <img
+          className="portfolio-card__image"
+          src={caso.image}
+          alt={caso.nombre}
         />
       ) : (
-        caso.image && (
-          <img
-            className="portfolio-card__image"
-            src={caso.image}
-            alt={caso.nombre}
+        caso.preview && (
+          <iframe
+            className="portfolio-card__preview-frame"
+            src={caso.preview}
+            title={caso.nombre}
+            tabIndex={-1}
+            aria-hidden="true"
           />
         )
       )}
