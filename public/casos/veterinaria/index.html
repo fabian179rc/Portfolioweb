@@ -124,9 +124,31 @@
       }
 
       .hero {
-        padding: 72px 0 56px;
-        background: radial-gradient(circle at 20% 10%, rgba(242, 166, 121, 0.14), transparent 55%);
-        text-align: center;
+        padding: 64px 0 0;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero .container {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        align-items: center;
+        gap: 40px;
+        padding-bottom: 64px;
+        position: relative;
+        z-index: 1;
+      }
+
+      @media (max-width: 860px) {
+        .hero .container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .hero-visual {
+          order: -1;
+          margin: 0 auto 12px;
+        }
       }
 
       .badge {
@@ -144,33 +166,100 @@
       }
 
       .hero h1 {
-        font-size: clamp(2rem, 5vw, 3rem);
+        font-size: clamp(2.1rem, 4.2vw, 2.9rem);
         font-weight: 800;
-        max-width: 760px;
-        margin: 0 auto 20px;
+        margin: 0 0 20px;
         line-height: 1.2;
       }
 
       .hero p.subtitle {
         color: var(--text-dim);
         font-size: 1.1rem;
-        max-width: 600px;
-        margin: 0 auto 32px;
+        max-width: 480px;
+        margin: 0 0 32px;
+      }
+
+      @media (max-width: 860px) {
+        .hero p.subtitle {
+          margin: 0 auto 32px;
+        }
       }
 
       .hero-actions {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 14px;
         margin-bottom: 40px;
+      }
+
+      @media (max-width: 860px) {
+        .hero-actions {
+          justify-content: center;
+        }
       }
 
       .trust-badges {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 14px;
+      }
+
+      @media (max-width: 860px) {
+        .trust-badges {
+          justify-content: center;
+        }
+      }
+
+      .hero-visual {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 280px;
+      }
+
+      .hero-blob {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%;
+        background: linear-gradient(135deg, var(--peach) 0%, var(--peach-dark) 100%);
+        opacity: 0.9;
+        z-index: 0;
+      }
+
+      .hero-pet-circle {
+        position: relative;
+        z-index: 1;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: var(--bg-card);
+        border: 6px solid var(--bg);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 5rem;
+      }
+
+      .hero-paw {
+        position: absolute;
+        font-size: 2rem;
+        opacity: 0.5;
+        z-index: 1;
+      }
+
+      .hero-paw--1 {
+        top: 0;
+        right: 24px;
+      }
+
+      .hero-paw--2 {
+        bottom: 12px;
+        left: 8px;
       }
 
       .trust-badge {
@@ -395,20 +484,27 @@
 
     <section class="hero">
       <div class="container">
-        <span class="badge">🕐 Urgencias las 24hs</span>
-        <h1>Cuidamos a tu mascota como parte de tu familia</h1>
-        <p class="subtitle">
-          Consultas, vacunación, cirugías y atención de urgencias con turno
-          online.
-        </p>
-        <div class="hero-actions">
-          <a class="btn-call" href="https://wa.me/5493415550400">💬 Sacar turno por WhatsApp</a>
-          <a class="btn-outline" href="tel:+5493415550400">📞 Emergencia: (341) 555-0400</a>
+        <div class="hero-copy">
+          <span class="badge">🕐 Urgencias las 24hs</span>
+          <h1>Cuidamos a tu mascota como parte de tu familia</h1>
+          <p class="subtitle">
+            Consultas, vacunación, cirugías y atención de urgencias con
+            turno online.
+          </p>
+          <div class="hero-actions">
+            <a class="btn-call" href="https://wa.me/5493415550400">💬 Sacar turno por WhatsApp</a>
+            <a class="btn-outline" href="tel:+5493415550400">📞 Emergencia: (341) 555-0400</a>
+          </div>
+          <div class="trust-badges">
+            <span class="trust-badge">🐕 +18 años de experiencia</span>
+            <span class="trust-badge">🚨 Guardia de urgencias 24hs</span>
+          </div>
         </div>
-        <div class="trust-badges">
-          <span class="trust-badge">🐕 +18 años de experiencia</span>
-          <span class="trust-badge">🚨 Guardia de urgencias 24hs</span>
-          <span class="trust-badge">✅ Veterinarios matriculados</span>
+        <div class="hero-visual">
+          <div class="hero-blob"></div>
+          <span class="hero-paw hero-paw--1">🐾</span>
+          <span class="hero-paw hero-paw--2">🐾</span>
+          <div class="hero-pet-circle">🐶</div>
         </div>
       </div>
     </section>
