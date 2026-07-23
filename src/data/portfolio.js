@@ -8,6 +8,7 @@ export const portfolio = [
     gradient: "linear-gradient(135deg, #3a2317 0%, #1a1008 100%)",
     aspectRatio: "4 / 3",
     image: "/casos/emergencias-hys/thumbnail.png",
+    imagePosition: "top",
     preview: "/casos/emergencias-hys/index.html?v=3",
   },
   {

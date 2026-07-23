@@ -19,6 +19,7 @@ export default function PortfolioCard({ caso }) {
           className="portfolio-card__image"
           src={caso.image}
           alt={caso.nombre}
+          style={{ objectPosition: caso.imagePosition || "center" }}
         />
       ) : (
         caso.preview && (
