@@ -28,7 +28,8 @@ export const portfolio = [
     descripcion:
       "Catálogo hub que centraliza los sistemas HyS en una sola landing, con jerarquía clara entre productos disponibles y próximos lanzamientos.",
     gradient: "linear-gradient(135deg, #234035 0%, #0e1a15 100%)",
-    aspectRatio: "1535 / 945",
+    aspectRatio: "1049 / 727",
+    image: "/casos/ecosistema-hys/thumbnail.png",
     preview: "/casos/ecosistema-hys/index.html",
   },
   {
