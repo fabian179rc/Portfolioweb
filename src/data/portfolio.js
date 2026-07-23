@@ -6,7 +6,7 @@ export const portfolio = [
     descripcion:
       "Landing de venta para un sistema de gestión de emergencias: storytelling de riesgo, prueba social y checkout con urgencia real.",
     gradient: "linear-gradient(135deg, #3a2317 0%, #1a1008 100%)",
-    aspectRatio: "6 / 5",
+    aspectRatio: "3 / 2",
     preview: "/casos/emergencias-hys/index.html?v=2",
   },
   {
