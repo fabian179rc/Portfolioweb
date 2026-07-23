@@ -348,21 +348,11 @@ body:has(.cursor-dot) button {
   padding: 3rem 0 6rem;
 }
 
-.portfolio__heading {
-  text-align: center;
-}
-
-.portfolio__kicker {
-  font-family: var(--font-serif);
-  font-size: 2.5rem;
-  color: var(--accent);
-  margin: 0 0 3rem;
-}
-
 .portfolio__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  margin-top: 2.5rem;
 }
 
 .portfolio-card {
