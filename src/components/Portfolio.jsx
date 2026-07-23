@@ -2,6 +2,8 @@ import { portfolio } from "../data/portfolio";
 import { useScrollReveal, revealClass } from "../hooks/useScrollReveal";
 import PortfolioCard from "./PortfolioCard";
 
+const CASOS = [...portfolio, ...portfolio];
+
 export default function Portfolio() {
   const [headingRef, headingVisible] = useScrollReveal();
 
@@ -13,9 +15,13 @@ export default function Portfolio() {
             Resultados que hablan por sí solos.
           </h2>
         </div>
-        <div className="portfolio__grid">
-          {portfolio.map((caso) => (
-            <PortfolioCard key={caso.numero} caso={caso} />
+      </div>
+      <div className="portfolio__carousel">
+        <div className="portfolio__track">
+          {CASOS.map((caso, index) => (
+            <div key={`${caso.numero}-${index}`} className="portfolio__track-item">
+              <PortfolioCard caso={caso} />
+            </div>
           ))}
         </div>
       </div>
