@@ -4,8 +4,6 @@ import Hero from "./components/Hero";
 import Ticker from "./components/Ticker";
 import Metricas from "./components/Metricas";
 import Problema from "./components/Problema";
-import Mecanismo from "./components/Mecanismo";
-import ComoFunciona from "./components/ComoFunciona";
 import Servicios from "./components/Servicios";
 import QueIncluye from "./components/QueIncluye";
 import Proceso from "./components/Proceso";
@@ -25,8 +23,6 @@ export default function App() {
       <Ticker />
       <Metricas />
       <Problema />
-      <Mecanismo />
-      <ComoFunciona />
       <Servicios />
       <QueIncluye />
       <Proceso />

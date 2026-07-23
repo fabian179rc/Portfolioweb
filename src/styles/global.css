@@ -817,50 +817,6 @@ body:has(.cursor-dot) button {
   opacity: 0.75;
 }
 
-/* Mecanismo */
-.mecanismo {
-  padding: 6rem 0;
-  border-top: 1px solid var(--border-subtle);
-  background: var(--bg-secondary);
-  text-align: center;
-}
-
-.mecanismo__inner {
-  max-width: 54ch;
-  margin: 0 auto;
-}
-
-.mecanismo__inner p {
-  color: var(--text-primary);
-  opacity: 0.8;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-top: 1.25rem;
-}
-
-/* Como funciona */
-.como-funciona {
-  padding: 6rem 0;
-  border-top: 1px solid var(--border-subtle);
-}
-
-.como-funciona__texto {
-  max-width: 62ch;
-  margin-top: 1.5rem;
-}
-
-.como-funciona__texto p {
-  color: var(--text-primary);
-  opacity: 0.8;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  margin-bottom: 1.2rem;
-}
-
-.como-funciona__texto p:last-child {
-  margin-bottom: 0;
-}
-
 /* Que incluye */
 .incluye {
   padding: 6rem 0;
