@@ -411,9 +411,101 @@ body:has(.cursor-dot) button {
   transform: scale(1.06);
 }
 
+.portfolio-card--button {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.portfolio-card__preview-frame {
+  width: 400%;
+  height: 400%;
+  border: 0;
+  transform: scale(0.25);
+  transform-origin: top left;
+  pointer-events: none;
+}
+
 @media (max-width: 900px) {
   .portfolio__grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Portfolio preview modal */
+.preview-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 6, 6, 0.82);
+  padding: 4vh 4vw;
+}
+
+.preview-modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  height: 88vh;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.preview-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.preview-modal__title {
+  font-family: var(--font-serif);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.preview-modal__close {
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  color: var(--text-primary);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.preview-modal__close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.preview-modal__frame {
+  flex: 1;
+  width: 100%;
+  border: 0;
+}
+
+@media (max-width: 700px) {
+  .preview-modal-overlay {
+    padding: 0;
+  }
+
+  .preview-modal {
+    height: 100vh;
+    max-width: 100%;
+    border-radius: 0;
   }
 }
 

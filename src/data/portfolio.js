@@ -50,12 +50,12 @@ export const portfolio = [
   },
   {
     numero: "05",
-    industria: "Fitness",
-    nombre: "El Atelier de la Fuerza",
+    industria: "Salud Dental",
+    nombre: "Sonrisa Dental Studio",
     descripcion:
-      "Una landing de alto impacto visual pensada para convertir seguidores de redes en socios del estudio.",
-    gradient: "linear-gradient(135deg, #331a1a 0%, #140a0a 100%)",
-    url: "#",
+      "Landing institucional para una clínica dental: horario vespertino como diferencial, servicios detallados por especialidad y reserva de turnos online.",
+    gradient: "linear-gradient(135deg, #1a2c33 0%, #0a1416 100%)",
+    preview: "/casos/dentistas/index.html",
   },
   {
     numero: "06",
