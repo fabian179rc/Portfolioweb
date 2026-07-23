@@ -23,12 +23,12 @@ export default function Filosofia() {
         <div className="filosofia__texto">
           <h2 className="section-title">La estrategia va primero.</h2>
           <p>
-            No empiezo por el diseño. Empiezo por entender cómo llega tu
-            cliente, qué duda tiene y qué necesita leer para confiar. Esas
-            preguntas se responden antes de elegir un color o una
-            tipografía. Trabajo directamente con cada cliente, sin capas
-            ni intermediarios, desde la primera conversación hasta el
-            lanzamiento.
+            No empezamos por el diseño. Empezamos por entender cómo llega
+            tu cliente, qué duda tiene y qué necesita leer para confiar.
+            Esas preguntas se responden antes de elegir un color o una
+            tipografía. Trabajamos directamente con cada cliente, sin
+            capas ni intermediarios, desde la primera conversación hasta
+            el lanzamiento.
           </p>
         </div>
         <div className="filosofia__paraquien">

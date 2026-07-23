@@ -81,7 +81,7 @@ export default function Contacto() {
             </label>
 
             <label className="contacto__campo">
-              <span>05 · Contame sobre tu negocio</span>
+              <span>05 · Contanos sobre tu negocio</span>
               <textarea name="mensaje" rows="4" required />
             </label>
 
@@ -100,7 +100,7 @@ export default function Contacto() {
             )}
             {status === "error" && (
               <p className="contacto__estado contacto__estado--error">
-                Algo falló. Escribime directo a {CONTACT.email}.
+                Algo falló. Escribinos directo a {CONTACT.email}.
               </p>
             )}
           </form>

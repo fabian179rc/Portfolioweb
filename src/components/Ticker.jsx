@@ -1,7 +1,7 @@
 const TICKER_ITEMS = [
   "Tu web debería convencer antes de que abran la boca",
   "Instagram te da seguidores. Una web te da clientes",
-  "No diseño páginas bonitas. Diseño páginas que convierten",
+  "No diseñamos páginas bonitas. Diseñamos páginas que convierten",
   "Hecha a mano. Pensada para vos",
 ];
 

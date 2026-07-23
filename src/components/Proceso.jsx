@@ -5,19 +5,19 @@ const PASOS = [
     numero: "01",
     titulo: "Diagnóstico",
     texto:
-      "Conversamos sobre tu negocio, tus clientes y qué querés lograr. Defino qué tipo de página tiene más sentido para vos.",
+      "Conversamos sobre tu negocio, tus clientes y qué querés lograr. Definimos qué tipo de página tiene más sentido para vos.",
   },
   {
     numero: "02",
     titulo: "Diseño y desarrollo",
     texto:
-      "Construyo la página desde cero. Te muestro avances, incorporo feedback y ajusto hasta que quede exacto.",
+      "Construimos la página desde cero. Te mostramos avances, incorporamos feedback y ajustamos hasta que quede exacto.",
   },
   {
     numero: "03",
     titulo: "Lanzamiento y soporte",
     texto:
-      "Publicamos, te explico cómo funciona todo y me quedo disponible para los primeros ajustes.",
+      "Publicamos, te explicamos cómo funciona todo y quedamos disponibles para los primeros ajustes.",
   },
 ];
 

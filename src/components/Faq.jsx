@@ -9,12 +9,12 @@ const PREGUNTAS = [
   {
     pregunta: "¿Qué pasa si no me gusta cómo queda?",
     respuesta:
-      "El proceso incluye revisiones. Ajustamos hasta que represente exactamente lo que querés comunicar. No entrego algo sin que estés conforme.",
+      "El proceso incluye revisiones. Ajustamos hasta que represente exactamente lo que querés comunicar. No entregamos algo sin que estés conforme.",
   },
   {
     pregunta: "¿Es para mi rubro?",
     respuesta:
-      "Trabajé con más de 13 rubros distintos, desde veterinarias hasta estudios jurídicos y fabricantes de alimentos.",
+      "Trabajamos con más de 13 rubros distintos, desde veterinarias hasta estudios jurídicos y fabricantes de alimentos.",
   },
   {
     pregunta: "¿Qué pasa después de que se lanza?",
@@ -24,12 +24,12 @@ const PREGUNTAS = [
   {
     pregunta: "¿Lo tengo que manejar yo después?",
     respuesta:
-      "Depende de cómo lo armamos. Hay versiones que podés actualizar vos mismo, y otras donde me consultás si necesitás cambios.",
+      "Depende de cómo lo armamos. Hay versiones que podés actualizar vos mismo, y otras donde nos consultás si necesitás cambios.",
   },
   {
     pregunta: "¿Tengo que saber de tecnología?",
     respuesta:
-      "No. Mi trabajo es que vos te concentres en tu negocio y que yo me encargue de que la web funcione.",
+      "No. Nuestro trabajo es que vos te concentres en tu negocio y que nosotros nos encarguemos de que la web funcione.",
   },
   {
     pregunta: "¿Es cara?",
