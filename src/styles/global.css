@@ -353,10 +353,8 @@ body:has(.cursor-dot) button {
 }
 
 .portfolio__kicker {
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
   color: var(--accent);
   margin: 0 0 0.5rem;
 }
