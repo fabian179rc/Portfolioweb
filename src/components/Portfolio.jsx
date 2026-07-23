@@ -12,10 +12,9 @@ export default function Portfolio() {
           ref={headingRef}
           className={`portfolio__heading ${revealClass(headingVisible)}`}
         >
-          <h2 className="portfolio__kicker">El Portfolio</h2>
-          <p className="section-subtitle">
-            Una selección de trabajos recientes.
-          </p>
+          <h2 className="portfolio__kicker">
+            Resultados que hablan por sí solos.
+          </h2>
         </div>
         <div className="portfolio__grid">
           {portfolio.map((caso) => (
