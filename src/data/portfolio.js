@@ -59,7 +59,8 @@ export const portfolio = [
     descripcion:
       "Landing de urgencias para electricistas y plomeros a domicilio: llamada directa como CTA principal, respuesta en menos de 60 minutos y garantía escrita.",
     gradient: "linear-gradient(135deg, #2d2110 0%, #0f0b05 100%)",
-    aspectRatio: "3 / 2",
+    aspectRatio: "1058 / 776",
+    image: "/casos/electricidad-plomeria/thumbnail.png",
     preview: "/casos/electricidad-plomeria/index.html?v=2",
   },
   {
