@@ -21,6 +21,10 @@
         --bg-card: #f5efe3;
         --sage: #4a5a45;
         --sage-dark: #3a4737;
+        --sage-soft: rgba(74, 90, 69, 0.12);
+        --clay: #c17a5b;
+        --clay-dark: #a15f42;
+        --clay-soft: rgba(193, 122, 91, 0.14);
         --text: #2b2620;
         --text-dim: #5c5445;
         --border: rgba(74, 90, 69, 0.18);
@@ -114,26 +118,90 @@
         width: 380px;
         height: 380px;
         border-radius: 38% 62% 55% 45% / 45% 40% 60% 55%;
-        background: radial-gradient(circle at 30% 30%, rgba(74, 90, 69, 0.18), rgba(74, 90, 69, 0.04));
+        background: radial-gradient(circle at 30% 30%, rgba(193, 122, 91, 0.2), rgba(74, 90, 69, 0.06));
         z-index: 0;
       }
 
       .hero .container {
         position: relative;
         z-index: 1;
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: center;
+        gap: 32px;
+      }
+
+      @media (max-width: 780px) {
+        .hero .container {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .hero-visual {
+          order: -1;
+          margin: 0 auto 16px;
+        }
       }
 
       .hero-copy {
-        max-width: 620px;
-        border-left: 3px solid var(--sage);
+        max-width: 560px;
+        border-left: 3px solid var(--clay);
         padding-left: 28px;
       }
 
-      @media (max-width: 640px) {
+      @media (max-width: 780px) {
         .hero-copy {
           border-left: none;
           padding-left: 0;
+          max-width: 100%;
         }
+      }
+
+      .hero-visual {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 240px;
+      }
+
+      .hero-circle {
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: linear-gradient(150deg, var(--sage) 0%, var(--clay) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4.4rem;
+        box-shadow: 0 24px 50px rgba(74, 90, 69, 0.28);
+      }
+
+      .hero-stat-chip {
+        position: absolute;
+        bottom: 6px;
+        left: -8px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 12px 18px;
+        box-shadow: 0 12px 30px rgba(43, 38, 32, 0.14);
+        text-align: left;
+      }
+
+      .hero-stat-chip .stat-number {
+        font-family: "Lora", serif;
+        font-style: italic;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--clay-dark);
+        line-height: 1;
+      }
+
+      .hero-stat-chip .stat-label {
+        font-size: 0.72rem;
+        color: var(--text-dim);
+        margin-top: 4px;
       }
 
       .kicker {
@@ -225,6 +293,47 @@
         font-size: 0.9rem;
       }
 
+      .icon-badge {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        margin-bottom: 16px;
+      }
+
+      .icon-badge--sage {
+        background: var(--sage-soft);
+      }
+
+      .icon-badge--clay {
+        background: var(--clay-soft);
+      }
+
+      .section-band {
+        background: var(--bg-alt);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .section-band-blob {
+        position: absolute;
+        bottom: -80px;
+        left: -60px;
+        width: 260px;
+        height: 260px;
+        border-radius: 55% 45% 40% 60% / 50% 55% 45% 50%;
+        background: radial-gradient(circle at 40% 40%, rgba(74, 90, 69, 0.14), transparent 70%);
+        z-index: 0;
+      }
+
+      .section-band .container {
+        position: relative;
+        z-index: 1;
+      }
+
       .grid-4 {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -243,11 +352,53 @@
         }
       }
 
+      .testimonio-card {
+        position: relative;
+        padding-top: 34px;
+      }
+
+      .testimonio-card .quote-mark {
+        position: absolute;
+        top: 8px;
+        left: 20px;
+        font-family: "Lora", serif;
+        font-size: 2.6rem;
+        color: var(--clay);
+        opacity: 0.5;
+        line-height: 1;
+      }
+
       .testimonio-card p.quote {
         color: var(--text-dim);
         font-size: 0.9rem;
         font-style: italic;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
+      }
+
+      .testimonio-card .autor-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .testimonio-avatar {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #f5efe3;
+      }
+
+      .testimonio-avatar--sage {
+        background: var(--sage);
+      }
+
+      .testimonio-avatar--clay {
+        background: var(--clay);
       }
 
       .testimonio-card .autor {
@@ -257,12 +408,30 @@
       }
 
       .faq-item {
+        display: flex;
+        gap: 18px;
         border-bottom: 1px solid var(--border);
-        padding: 20px 0;
+        padding: 22px 0;
       }
 
       .faq-item:last-child {
         border-bottom: none;
+      }
+
+      .faq-number {
+        flex-shrink: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: var(--clay-soft);
+        color: var(--clay-dark);
+        font-family: "Lora", serif;
+        font-style: italic;
+        font-size: 0.85rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .faq-item h4 {
@@ -278,17 +447,48 @@
 
       .cta-final-wrap {
         padding: 56px 0 72px;
+      }
+
+      .cta-final {
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(150deg, var(--sage) 0%, var(--sage-dark) 100%);
+        border-radius: 24px;
+        padding: 56px 32px;
         text-align: center;
       }
 
-      .cta-final-wrap h2 {
-        font-size: clamp(1.4rem, 3vw, 1.8rem);
+      .cta-final-blob {
+        position: absolute;
+        top: -60px;
+        right: -50px;
+        width: 220px;
+        height: 220px;
+        border-radius: 55% 45% 40% 60% / 50% 55% 45% 50%;
+        background: rgba(193, 122, 91, 0.35);
+        z-index: 0;
+      }
+
+      .cta-final > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-final h2 {
+        font-family: "Lora", serif;
+        font-style: italic;
+        font-size: clamp(1.4rem, 3vw, 1.9rem);
         margin-bottom: 24px;
-        max-width: 480px;
+        max-width: 440px;
         margin-left: auto;
         margin-right: auto;
-        color: var(--text);
-        font-weight: 700;
+        color: #f5efe3;
+        font-weight: 600;
+      }
+
+      .cta-final .btn-sage {
+        background: var(--clay);
+        color: #fff6ee;
       }
 
       footer {
@@ -352,6 +552,13 @@
             <span>Confidencialidad garantizada</span>
           </div>
         </div>
+        <div class="hero-visual">
+          <div class="hero-circle">🌿</div>
+          <div class="hero-stat-chip">
+            <div class="stat-number">+8 años</div>
+            <div class="stat-label">acompañando procesos</div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -360,14 +567,17 @@
         <h2 class="section-title">Enfoque y modalidades</h2>
         <div class="grid-3">
           <div class="card">
+            <div class="icon-badge icon-badge--sage">🛋️</div>
             <h4>Terapia individual</h4>
             <p>Espacio de escucha personalizado, a tu ritmo.</p>
           </div>
           <div class="card">
+            <div class="icon-badge icon-badge--clay">💻</div>
             <h4>Modalidad online</h4>
             <p>Sesiones por videollamada desde donde estés.</p>
           </div>
           <div class="card">
+            <div class="icon-badge icon-badge--sage">🏡</div>
             <h4>Modalidad presencial</h4>
             <p>Consultorio disponible para quienes lo prefieran.</p>
           </div>
@@ -375,20 +585,25 @@
       </div>
     </section>
 
-    <section>
+    <section class="section-band">
+      <div class="section-band-blob"></div>
       <div class="container">
         <h2 class="section-title">Por qué elegir este espacio</h2>
         <div class="grid-4">
           <div class="card">
+            <div class="icon-badge icon-badge--clay">👂</div>
             <h4>Escucha sin juicio</h4>
           </div>
           <div class="card">
+            <div class="icon-badge icon-badge--sage">🔒</div>
             <h4>Confidencialidad absoluta</h4>
           </div>
           <div class="card">
+            <div class="icon-badge icon-badge--clay">🕐</div>
             <h4>Horarios flexibles</h4>
           </div>
           <div class="card">
+            <div class="icon-badge icon-badge--sage">🤝</div>
             <h4>Primera consulta para conocernos</h4>
           </div>
         </div>
@@ -400,24 +615,34 @@
         <h2 class="section-title">Testimonios</h2>
         <div class="grid-3">
           <div class="card testimonio-card">
+            <span class="quote-mark">“</span>
             <p class="quote">
-              "Encontré un espacio donde pude poner en palabras cosas que
-              hacía años no decía."
+              Encontré un espacio donde pude poner en palabras cosas que
+              hacía años no decía.
             </p>
-            <div class="autor">— M.</div>
+            <div class="autor-row">
+              <span class="testimonio-avatar testimonio-avatar--sage">M.</span>
+              <div class="autor">Paciente en terapia presencial</div>
+            </div>
           </div>
           <div class="card testimonio-card">
+            <span class="quote-mark">“</span>
             <p class="quote">
-              "La modalidad online me permitió sostener la terapia incluso
-              viajando por trabajo."
+              La modalidad online me permitió sostener la terapia incluso
+              viajando por trabajo.
             </p>
-            <div class="autor">— J.</div>
+            <div class="autor-row">
+              <span class="testimonio-avatar testimonio-avatar--clay">J.</span>
+              <div class="autor">Paciente en terapia online</div>
+            </div>
           </div>
           <div class="card testimonio-card">
-            <p class="quote">
-              "Me sentí escuchada desde la primera sesión."
-            </p>
-            <div class="autor">— L.</div>
+            <span class="quote-mark">“</span>
+            <p class="quote">Me sentí escuchada desde la primera sesión.</p>
+            <div class="autor-row">
+              <span class="testimonio-avatar testimonio-avatar--sage">L.</span>
+              <div class="autor">Paciente en terapia presencial</div>
+            </div>
           </div>
         </div>
       </div>
@@ -427,24 +652,36 @@
       <div class="container">
         <h2 class="section-title">Preguntas frecuentes</h2>
         <div class="faq-item">
-          <h4>¿Cómo es la primera sesión?</h4>
-          <p>Es un encuentro para conocernos, sin compromiso de continuar.</p>
+          <span class="faq-number">01</span>
+          <div>
+            <h4>¿Cómo es la primera sesión?</h4>
+            <p>Es un encuentro para conocernos, sin compromiso de continuar.</p>
+          </div>
         </div>
         <div class="faq-item">
-          <h4>¿Las sesiones son online?</h4>
-          <p>Podés elegir online o presencial, según lo que te resulte más cómodo.</p>
+          <span class="faq-number">02</span>
+          <div>
+            <h4>¿Las sesiones son online?</h4>
+            <p>Podés elegir online o presencial, según lo que te resulte más cómodo.</p>
+          </div>
         </div>
         <div class="faq-item">
-          <h4>¿Es confidencial?</h4>
-          <p>Sí, todo lo que se habla en sesión queda dentro del consultorio.</p>
+          <span class="faq-number">03</span>
+          <div>
+            <h4>¿Es confidencial?</h4>
+            <p>Sí, todo lo que se habla en sesión queda dentro del consultorio.</p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="cta-final-wrap">
       <div class="container">
-        <h2>Si sentís que es momento de empezar, escribime</h2>
-        <a class="btn-sage" href="https://wa.me/5493415550500">Escribime</a>
+        <div class="cta-final">
+          <div class="cta-final-blob"></div>
+          <h2>Si sentís que es momento de empezar, escribime</h2>
+          <a class="btn-sage" href="https://wa.me/5493415550500">Escribime</a>
+        </div>
       </div>
     </section>
 
