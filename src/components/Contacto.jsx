@@ -44,7 +44,7 @@ export default function Contacto() {
       <div className={`container contacto__grid ${revealClass(isVisible)}`}>
         <div className="contacto__intro">
           <h2 className="section-title">
-            ¿Le damos forma a tu presencia online?
+            Empecemos hoy a traerte más clientes.
           </h2>
           {/* <p className="section-subtitle">
             Cada proyecto merece una conversación real.
