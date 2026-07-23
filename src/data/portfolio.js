@@ -51,10 +51,11 @@ export const portfolio = [
   {
     numero: "06",
     industria: "Servicios",
-    nombre: "La Mano Confiable",
+    nombre: "Chispa & Caño 24hs",
     descripcion:
-      "Un sitio simple y directo que convierte visitas en llamadas para un negocio de servicios técnicos a domicilio.",
-    gradient: "linear-gradient(135deg, #1a2a33 0%, #0a1216 100%)",
-    url: "#",
+      "Landing de urgencias para electricistas y plomeros a domicilio: llamada directa como CTA principal, respuesta en menos de 60 minutos y garantía escrita.",
+    gradient: "linear-gradient(135deg, #2d2110 0%, #0f0b05 100%)",
+    aspectRatio: "3 / 2",
+    preview: "/casos/electricidad-plomeria/index.html",
   },
 ];
