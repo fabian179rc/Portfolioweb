@@ -149,12 +149,10 @@ body:has(.cursor-dot) button {
   justify-content: space-between;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+  padding-left: 8rem;
 }
 
 .nav__logo {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
   font-family: var(--font-serif);
   font-size: 1.25rem;
   color: var(--text-primary);
@@ -162,10 +160,14 @@ body:has(.cursor-dot) button {
 }
 
 .nav__logo-img {
-  width: 4rem;
-  height: 4rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.75rem;
+  width: 8rem;
+  height: 8rem;
   border-radius: 50%;
   object-fit: cover;
+  z-index: 1;
 }
 
 .nav__links {
@@ -204,6 +206,16 @@ body:has(.cursor-dot) button {
 @media (max-width: 768px) {
   .nav__links {
     display: none;
+  }
+
+  .nav__logo-img {
+    width: 4rem;
+    height: 4rem;
+    left: 0.5rem;
+  }
+
+  .nav__inner {
+    padding-left: 4.5rem;
   }
 }
 
