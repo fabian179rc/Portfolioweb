@@ -948,7 +948,7 @@ body:has(.cursor-dot) button {
 
 .faq__lista {
   max-width: 68ch;
-  margin-top: 2.5rem;
+  margin: 2.5rem auto 0;
 }
 
 .faq__item {
