@@ -27,21 +27,22 @@ Reescribir el contenido y ampliar la estructura de secciones del sitio existente
    - CTAs sin cambios ("Ver Portfolio →" / "WhatsApp Directo →")
 3. **Ticker** — nuevos items rotando 4 one-liners de la carta (ver lista de "Ticker" abajo).
 4. **Métricas** — sin cambios (400+ Proyectos, 13 Industrias, 100% A Medida, 1:1 Atención Directa ya coinciden con la carta).
-5. **Portfolio** — sin cambios de datos/estructura (ya tiene 10 casos reales, 13 industrias efectivas cubiertas).
-6. **El Problema** *(sección nueva)* — id `#problema`, agregado al nav. Versión corta (tomada de la Opción B), sin pull-quote separado:
+5. **El Problema** *(sección nueva)* — id `#problema`, agregado al nav. Versión corta (tomada de la Opción B), sin pull-quote separado:
    - Título: "Todos los días perdés consultas que nunca vas a ver."
    - Párrafo único: "No es culpa del mercado ni del rubro. Es que tu presencia digital no está haciendo el trabajo que debería hacer. Alguien busca lo que ofrecés, no lo encuentra en tu web y en tres segundos decide irse a la competencia."
    - Debajo, fila de 4 "pills" (mismo estilo que el mockup B — `border-subtle`, `border-radius: 999px`): "Instagram no alcanza" · "Las plantillas no convierten" · "\"El sobrino\" no da soporte" · "Las agencias grandes son impersonales".
    - Reemplaza la sección "Por qué fallan las soluciones actuales" del plan original (esos 5 puntos de la carta quedan condensados en los pills, no como sección aparte).
-7. **Mecanismo Único** *(sección nueva, bloque destacado con `bg-secondary`)* — "La Página que Trabaja Antes que Vos" + párrafo.
-8. **Lo que pasa cuando funciona** *(sección nueva, narrativa corta)* — 2 párrafos.
-9. **Servicios** — se actualiza `src/data/servicios.js`: pasa de 5 ítems solo-nombre a 5 ítems con descripción "ideal para" (ver tabla abajo). Requiere ampliar `Servicios.jsx` para renderizar la descripción.
-10. **Qué incluye cada proyecto** *(sección nueva)* — grid de 8 ítems (checklist).
-11. **Cómo trabajamos** *(sección nueva)* — 3 pasos (Diagnóstico / Diseño y desarrollo / Lanzamiento y soporte).
-12. **Filosofía** — se reescribe el texto principal ("La estrategia va primero") y se agrega el bloque "Para quién es / no es" (2 columnas) dentro de la misma sección, reemplazando la lista actual de diferenciales.
+6. **Mecanismo Único** *(sección nueva, bloque destacado con `bg-secondary`)* — "La Página que Trabaja Antes que Vos" + párrafo.
+7. **Lo que pasa cuando funciona** *(sección nueva, narrativa corta)* — 2 párrafos.
+8. **Servicios** — se actualiza `src/data/servicios.js`: pasa de 5 ítems solo-nombre a 5 ítems con descripción "ideal para" (ver tabla abajo). Requiere ampliar `Servicios.jsx` para renderizar la descripción.
+9. **Qué incluye cada proyecto** *(sección nueva)* — grid de 8 ítems (checklist).
+10. **Cómo trabajamos** *(sección nueva)* — 3 pasos (Diagnóstico / Diseño y desarrollo / Lanzamiento y soporte).
+11. **Filosofía** — se reescribe el texto principal ("La estrategia va primero") y se agrega el bloque "Para quién es / no es" (2 columnas) dentro de la misma sección, reemplazando la lista actual de diferenciales. Cumple el rol de "Para quién es SeronStudio" del mockup.
+12. **Portfolio** *(reubicado)* — el mockup de Opción A lo ubica como "Ejemplos reales" cerca del final, no pegado a Métricas. Sin cambios de datos/estructura del componente, solo de posición: va después de Filosofía, antes de FAQ.
 13. **FAQ** *(sección nueva)* — acordeón (`<details>`) con las 7 objeciones de la carta.
-14. **Contacto** — se actualiza el copy del CTA ("¿Le damos forma a tu presencia online?"), se agrega el mensaje de WhatsApp pre-cargado ("Hola, vi SeronStudio y me gustaría consultar por una web para mi negocio.") al link de WhatsApp vía query param `?text=`.
-15. **Footer** — tagline nuevo: "La página que trabaja antes que vos."
+14. **Sin riesgo** *(sección nueva, bloque `bg-secondary`)* — "Primero hablamos. Después decidís." + párrafo de reassurance. (Faltaba en la primera versión del spec — corregido tras detectar que no matcheaba el mockup aprobado.)
+15. **Contacto** — se actualiza el copy del CTA ("¿Le damos forma a tu presencia online?"), se agrega el mensaje de WhatsApp pre-cargado ("Hola, vi SeronStudio y me gustaría consultar por una web para mi negocio.") al link de WhatsApp vía query param `?text=`.
+16. **Footer** — tagline nuevo: "La página que trabaja antes que vos."
 
 ## Datos y componentes a tocar
 
@@ -60,7 +61,7 @@ Reescribir el contenido y ampliar la estructura de secciones del sitio existente
 - `src/components/Contacto.jsx` — copy de CTA + WhatsApp con mensaje pre-cargado.
 - `src/components/Footer.jsx` — tagline nuevo.
 - `src/App.jsx` — insertar los componentes nuevos en el orden de la sección "Estructura".
-- **Componentes nuevos**: `Problema.jsx` (título + párrafo + pills), `Mecanismo.jsx`, `ComoFunciona.jsx` (narrativa), `QueIncluye.jsx`, `Proceso.jsx`, `Faq.jsx`. Cada uno sigue el patrón existente: `useScrollReveal` + `revealClass`, `<section className="...">`, contenido dentro de `.container`.
+- **Componentes nuevos**: `Problema.jsx` (título + párrafo + pills), `Mecanismo.jsx`, `ComoFunciona.jsx` (narrativa), `QueIncluye.jsx`, `Proceso.jsx`, `Faq.jsx`, `SinRiesgo.jsx`. Cada uno sigue el patrón existente: `useScrollReveal` + `revealClass`, `<section className="...">`, contenido dentro de `.container`.
 - `src/styles/global.css` — nuevas clases para las secciones nuevas, reutilizando tokens existentes (sin agregar colores nuevos). Basarse en los estilos ya probados en los mockups (Artifacts Opción A/B) para pills, bloque destacado, checklist y acordeón FAQ.
 - `Nav.jsx` y `Footer.jsx` — agregar el link "El Problema" (`#problema`) a la lista existente, quedando: Portafolio, El Problema, Servicios, Filosofía, Consulta.
 

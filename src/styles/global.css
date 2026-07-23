@@ -980,3 +980,24 @@ body:has(.cursor-dot) button {
   max-width: 58ch;
   line-height: 1.6;
 }
+
+/* Sin riesgo */
+.riesgo {
+  padding: 6rem 0;
+  border-top: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+  text-align: center;
+}
+
+.riesgo__inner {
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+.riesgo__inner p {
+  color: var(--text-primary);
+  opacity: 0.75;
+  margin-top: 1rem;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}

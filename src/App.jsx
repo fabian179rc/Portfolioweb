@@ -3,7 +3,6 @@ import Nav from "./components/Nav";
 import Hero from "./components/Hero";
 import Ticker from "./components/Ticker";
 import Metricas from "./components/Metricas";
-import Portfolio from "./components/Portfolio";
 import Problema from "./components/Problema";
 import Mecanismo from "./components/Mecanismo";
 import ComoFunciona from "./components/ComoFunciona";
@@ -11,7 +10,9 @@ import Servicios from "./components/Servicios";
 import QueIncluye from "./components/QueIncluye";
 import Proceso from "./components/Proceso";
 import Filosofia from "./components/Filosofia";
+import Portfolio from "./components/Portfolio";
 import Faq from "./components/Faq";
+import SinRiesgo from "./components/SinRiesgo";
 import Contacto from "./components/Contacto";
 import Footer from "./components/Footer";
 
@@ -23,7 +24,6 @@ export default function App() {
       <Hero />
       <Ticker />
       <Metricas />
-      <Portfolio />
       <Problema />
       <Mecanismo />
       <ComoFunciona />
@@ -31,7 +31,9 @@ export default function App() {
       <QueIncluye />
       <Proceso />
       <Filosofia />
+      <Portfolio />
       <Faq />
+      <SinRiesgo />
       <Contacto />
       <Footer />
     </>
