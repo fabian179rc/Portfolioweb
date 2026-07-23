@@ -12,7 +12,9 @@ export default function Footer() {
       <div className="container footer__inner">
         <div>
           <p className="footer__logo">SeronStudio</p>
-          <p className="footer__tagline">La página que trabaja para vos.</p>
+          <p className="footer__tagline">
+            La página que trabaja <strong className="footer__tagline-highlight">para vos.</strong>
+          </p>
         </div>
         <nav className="footer__links">
           {FOOTER_LINKS.map((link) => (

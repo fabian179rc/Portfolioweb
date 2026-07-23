@@ -769,6 +769,10 @@ body:has(.cursor-dot) button {
   margin: 0.25rem 0 0;
 }
 
+.footer__tagline-highlight {
+  text-decoration: underline;
+}
+
 .footer__links {
   display: flex;
   gap: 1.5rem;
