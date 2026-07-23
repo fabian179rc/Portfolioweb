@@ -1508,7 +1508,7 @@ import { useScrollReveal, revealClass } from "../hooks/useScrollReveal";
 const TIPOS_PROYECTO = [
   "Sitio de Marca Completo",
   "Landing Page de Captación",
-  "E-commerce",
+  // "E-commerce",
   "Rediseño y Optimización",
   "Mantenimiento y Soporte",
 ];
@@ -1547,10 +1547,10 @@ export default function Contacto() {
       <div className={`container contacto__grid ${revealClass(isVisible)}`}>
         <div className="contacto__intro">
           <h2 className="section-title">Hablemos.</h2>
+          //{" "}
           <p className="section-subtitle">
-            Cada proyecto merece una conversación real.
+            // Cada proyecto merece una conversación real. //{" "}
           </p>
-
           <form className="contacto__form" onSubmit={handleSubmit}>
             <label className="contacto__campo">
               <span>01 · Nombre</span>

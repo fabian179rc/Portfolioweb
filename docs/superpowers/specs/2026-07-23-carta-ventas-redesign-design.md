@@ -27,18 +27,18 @@ Reescribir el contenido y ampliar la estructura de secciones del sitio existente
    - CTAs sin cambios ("Ver Portfolio →" / "WhatsApp Directo →")
 3. **Ticker** — nuevos items rotando 4 one-liners de la carta (ver lista de "Ticker" abajo).
 4. **Métricas** — sin cambios (400+ Proyectos, 13 Industrias, 100% A Medida, 1:1 Atención Directa ya coinciden con la carta).
-5. **El Problema** *(sección nueva)* — id `#problema`, agregado al nav. Versión corta (tomada de la Opción B), sin pull-quote separado:
+5. **El Problema** _(sección nueva)_ — id `#problema`, agregado al nav. Versión corta (tomada de la Opción B), sin pull-quote separado:
    - Título: "Todos los días perdés consultas que nunca vas a ver."
    - Párrafo único: "No es culpa del mercado ni del rubro. Es que tu presencia digital no está haciendo el trabajo que debería hacer. Alguien busca lo que ofrecés, no lo encuentra en tu web y en tres segundos decide irse a la competencia."
    - Debajo, fila de 4 "pills" (mismo estilo que el mockup B — `border-subtle`, `border-radius: 999px`): "Instagram no alcanza" · "Las plantillas no convierten" · "\"El sobrino\" no da soporte" · "Las agencias grandes son impersonales".
    - Reemplaza la sección "Por qué fallan las soluciones actuales" del plan original (esos 5 puntos de la carta quedan condensados en los pills, no como sección aparte).
 6. **Servicios** — se actualiza `src/data/servicios.js`: pasa de 5 ítems solo-nombre a 5 ítems con descripción "ideal para" (ver tabla abajo). Requiere ampliar `Servicios.jsx` para renderizar la descripción.
-7. **Qué incluye cada proyecto** *(sección nueva)* — grid de 8 ítems (checklist).
-8. **Cómo trabajamos** *(sección nueva)* — 3 pasos (Diagnóstico / Diseño y desarrollo / Lanzamiento y soporte).
+7. **Qué incluye cada proyecto** _(sección nueva)_ — grid de 8 ítems (checklist).
+8. **Cómo trabajamos** _(sección nueva)_ — 3 pasos (Diagnóstico / Diseño y desarrollo / Lanzamiento y soporte).
 9. **Filosofía** — se reescribe el texto principal ("La estrategia va primero") y se agrega el bloque "Para quién es / no es" (2 columnas) dentro de la misma sección, reemplazando la lista actual de diferenciales. Cumple el rol de "Para quién es SeronStudio" del mockup.
-10. **Portfolio** *(reubicado)* — el mockup de Opción A lo ubica como "Ejemplos reales" cerca del final, no pegado a Métricas. Sin cambios de datos/estructura del componente, solo de posición: va después de Filosofía, antes de FAQ.
-11. **FAQ** *(sección nueva)* — acordeón (`<details>`) con las 7 objeciones de la carta.
-12. **Inversión** *(sección nueva, bloque `bg-secondary`, componente `Inversion.jsx`)* — "Invertí en tu web. Hacé crecer tu negocio." + el párrafo "La pregunta real..." de la carta (costo de oportunidad de no tener una web que funcione). Reemplaza la idea original de "Sin riesgo" (reassurance de "sin compromiso") por un enfoque de inversión/crecimiento, a pedido del usuario tras ver la primera versión.
+10. **Portfolio** _(reubicado)_ — el mockup de Opción A lo ubica como "Ejemplos reales" cerca del final, no pegado a Métricas. Sin cambios de datos/estructura del componente, solo de posición: va después de Filosofía, antes de FAQ.
+11. **FAQ** _(sección nueva)_ — acordeón (`<details>`) con las 7 objeciones de la carta.
+12. **Inversión** _(sección nueva, bloque `bg-secondary`, componente `Inversion.jsx`)_ — "Invertí en tu web. Hacé crecer tu negocio." + el párrafo "La pregunta real..." de la carta (costo de oportunidad de no tener una web que funcione). Reemplaza la idea original de "Sin riesgo" (reassurance de "sin compromiso") por un enfoque de inversión/crecimiento, a pedido del usuario tras ver la primera versión.
 13. **Contacto** — se actualiza el copy del CTA ("¿Le damos forma a tu presencia online?"), se agrega el mensaje de WhatsApp pre-cargado ("Hola, vi SeronStudio y me gustaría consultar por una web para mi negocio.") al link de WhatsApp vía query param `?text=`.
 14. **Footer** — tagline nuevo: "La página que trabaja antes que vos."
 
@@ -52,7 +52,7 @@ Reescribir el contenido y ampliar la estructura de secciones del sitio existente
   | 01 | Landing de Captación | Ideal para profesionales independientes, servicios de urgencia y consultorios que dependen de consultas iniciales. |
   | 02 | Sitio Institucional Completo | Ideal para estudios jurídicos, clínicas, inmobiliarias y servicios profesionales que necesitan mostrar profundidad. |
   | 03 | Sitio de Marca | Ideal para marcas de alimentos, belleza, moda y gastronomía con identidad propia para transmitir. |
-  | 04 | E-commerce | Para negocios que quieren vender online o sumar un canal digital propio a lo presencial. |
+  <!-- | 04 | E-commerce | Para negocios que quieren vender online o sumar un canal digital propio a lo presencial. | -->
   | 05 | Rediseño y Optimización | Para negocios que ya tienen algo, pero no convierte, se ve viejo o no funciona bien en celular. |
 - `src/components/Servicios.jsx` — renderizar `descripcion` debajo del nombre.
 - `src/components/Hero.jsx` — nuevo H1/subtítulo.

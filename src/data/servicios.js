@@ -17,12 +17,12 @@ export const servicios = [
     descripcion:
       "Ideal para marcas de alimentos, belleza, moda y gastronomía con identidad propia para transmitir.",
   },
-  {
-    numero: "04",
-    nombre: "E-commerce",
-    descripcion:
-      "Para negocios que quieren vender online o sumar un canal digital propio a lo presencial.",
-  },
+  // {
+  //   numero: "04",
+  //   nombre: "E-commerce",
+  //   descripcion:
+  //     "Para negocios que quieren vender online o sumar un canal digital propio a lo presencial.",
+  // },
   {
     numero: "05",
     nombre: "Rediseño y Optimización",

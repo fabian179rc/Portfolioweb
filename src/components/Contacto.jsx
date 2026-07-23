@@ -5,7 +5,7 @@ import { useScrollReveal, revealClass } from "../hooks/useScrollReveal";
 const TIPOS_PROYECTO = [
   "Sitio de Marca Completo",
   "Landing Page de Captación",
-  "E-commerce",
+  // "E-commerce",
   "Rediseño y Optimización",
   "Mantenimiento y Soporte",
 ];
@@ -43,10 +43,12 @@ export default function Contacto() {
     <section id="consulta" className="contacto" ref={ref}>
       <div className={`container contacto__grid ${revealClass(isVisible)}`}>
         <div className="contacto__intro">
-          <h2 className="section-title">¿Le damos forma a tu presencia online?</h2>
-          <p className="section-subtitle">
+          <h2 className="section-title">
+            ¿Le damos forma a tu presencia online?
+          </h2>
+          {/* <p className="section-subtitle">
             Cada proyecto merece una conversación real.
-          </p>
+          </p> */}
 
           <form className="contacto__form" onSubmit={handleSubmit}>
             <label className="contacto__campo">
@@ -60,7 +62,12 @@ export default function Contacto() {
             </label>
 
             <label className="contacto__campo">
-              <span>03 · Tipo de Proyecto</span>
+              <span>03 · WhatsApp</span>
+              <input type="tel" name="whatsapp" required />
+            </label>
+
+            <label className="contacto__campo">
+              <span>04 · Tipo de Proyecto</span>
               <select name="tipo_proyecto" required defaultValue="">
                 <option value="" disabled>
                   Elegí una opción
@@ -74,7 +81,7 @@ export default function Contacto() {
             </label>
 
             <label className="contacto__campo">
-              <span>04 · Contame sobre tu negocio</span>
+              <span>05 · Contame sobre tu negocio</span>
               <textarea name="mensaje" rows="4" required />
             </label>
 
@@ -108,9 +115,7 @@ export default function Contacto() {
           >
             WhatsApp Directo →
           </a>
-          <p className="contacto__nota">
-            Respuesta personal en menos de 24hs.
-          </p>
+          <p className="contacto__nota">Respuesta personal en menos de 24hs.</p>
         </div>
       </div>
     </section>

@@ -21,10 +21,12 @@
 ## Task 1: Servicios — agregar descripciones
 
 **Files:**
+
 - Modify: `src/data/servicios.js`
 - Modify: `src/components/Servicios.jsx`
 
 **Interfaces:**
+
 - Produces: `servicios` array con forma `{ numero: string, nombre: string, descripcion: string }` (antes no tenía `descripcion`) — usado por `Servicios.jsx`.
 
 - [ ] **Step 1: Reescribir `src/data/servicios.js`**
@@ -49,12 +51,12 @@ export const servicios = [
     descripcion:
       "Ideal para marcas de alimentos, belleza, moda y gastronomía con identidad propia para transmitir.",
   },
-  {
-    numero: "04",
-    nombre: "E-commerce",
-    descripcion:
-      "Para negocios que quieren vender online o sumar un canal digital propio a lo presencial.",
-  },
+  // {
+  //   numero: "04",
+  //   nombre: "E-commerce",
+  //   descripcion:
+  //     "Para negocios que quieren vender online o sumar un canal digital propio a lo presencial.",
+  // },
   {
     numero: "05",
     nombre: "Rediseño y Optimización",
@@ -69,18 +71,20 @@ export const servicios = [
 Reemplazar el `<li>` del `.map`:
 
 ```jsx
-{servicios.map((servicio) => (
-  <li key={servicio.numero} className="servicios__item">
-    <span className="servicios__numero">{servicio.numero}</span>
-    <div className="servicios__texto">
-      <span className="servicios__nombre">{servicio.nombre}</span>
-      <p className="servicios__descripcion">{servicio.descripcion}</p>
-    </div>
-    <span className="servicios__flecha" aria-hidden="true">
-      →
-    </span>
-  </li>
-))}
+{
+  servicios.map((servicio) => (
+    <li key={servicio.numero} className="servicios__item">
+      <span className="servicios__numero">{servicio.numero}</span>
+      <div className="servicios__texto">
+        <span className="servicios__nombre">{servicio.nombre}</span>
+        <p className="servicios__descripcion">{servicio.descripcion}</p>
+      </div>
+      <span className="servicios__flecha" aria-hidden="true">
+        →
+      </span>
+    </li>
+  ));
+}
 ```
 
 - [ ] **Step 3: Agregar estilos en `src/styles/global.css`**
@@ -135,6 +139,7 @@ git commit -m "Suma descripciones a los servicios (carta de ventas)"
 ## Task 2: Hero — nuevo copy
 
 **Files:**
+
 - Modify: `src/components/Hero.jsx`
 
 - [ ] **Step 1: Reemplazar el `<h1>` y el `<p className="hero__subtitle">`**
@@ -189,6 +194,7 @@ git commit -m "Actualiza el copy del Hero con el titular de la carta de ventas"
 ## Task 3: Ticker — nuevos one-liners
 
 **Files:**
+
 - Modify: `src/components/Ticker.jsx`
 
 - [ ] **Step 1: Reemplazar `TICKER_ITEMS`**
@@ -221,6 +227,7 @@ git commit -m "Actualiza los one-liners del ticker con frases de la carta de ven
 ## Task 4: Sección "El Problema"
 
 **Files:**
+
 - Create: `src/components/Problema.jsx`
 - Modify: `src/App.jsx`
 - Modify: `src/components/Nav.jsx`
@@ -228,6 +235,7 @@ git commit -m "Actualiza los one-liners del ticker con frases de la carta de ven
 - Modify: `src/styles/global.css`
 
 **Interfaces:**
+
 - Produces: componente `Problema` (default export), sección con `id="problema"` — el link de nav apunta a `#problema`.
 
 - [ ] **Step 1: Crear `src/components/Problema.jsx`**
@@ -252,10 +260,10 @@ export default function Problema() {
           Todos los días perdés consultas que nunca vas a ver.
         </h2>
         <p className="problema__texto">
-          No es culpa del mercado ni del rubro. Es que tu presencia digital
-          no está haciendo el trabajo que debería hacer. Alguien busca lo
-          que ofrecés, no lo encuentra en tu web y en tres segundos decide
-          irse a la competencia.
+          No es culpa del mercado ni del rubro. Es que tu presencia digital no
+          está haciendo el trabajo que debería hacer. Alguien busca lo que
+          ofrecés, no lo encuentra en tu web y en tres segundos decide irse a la
+          competencia.
         </p>
         <ul className="problema__pills">
           {PILLS.map((pill) => (
@@ -390,6 +398,7 @@ git commit -m "Agrega la sección El Problema"
 ## Task 5: Sección "Mecanismo Único"
 
 **Files:**
+
 - Create: `src/components/Mecanismo.jsx`
 - Modify: `src/App.jsx`
 - Modify: `src/styles/global.css`
@@ -407,10 +416,10 @@ export default function Mecanismo() {
       <div className={`container mecanismo__inner ${revealClass(isVisible)}`}>
         <h2 className="section-title">La Página que Trabaja Antes que Vos</h2>
         <p>
-          Una página bien construida no es un folleto online. Es un
-          vendedor silencioso que trabaja las 24 horas: explica los
-          servicios, genera confianza antes del primer contacto, y lleva
-          al cliente directo a WhatsApp ya convencido.
+          Una página bien construida no es un folleto online. Es un vendedor
+          silencioso que trabaja las 24 horas: explica los servicios, genera
+          confianza antes del primer contacto, y lleva al cliente directo a
+          WhatsApp ya convencido.
         </p>
       </div>
     </section>
@@ -470,6 +479,7 @@ git commit -m "Agrega la sección Mecanismo Único"
 ## Task 6: Sección "Lo que pasa cuando funciona"
 
 **Files:**
+
 - Create: `src/components/ComoFunciona.jsx`
 - Modify: `src/App.jsx`
 - Modify: `src/styles/global.css`
@@ -490,15 +500,14 @@ export default function ComoFunciona() {
         </h2>
         <div className="como-funciona__texto">
           <p>
-            Un cliente ve una recomendación o un resultado en Google. Hace
-            clic. En segundos entiende qué hacés, para quién es y por qué
-            elegirte. Ve prueba de que trabajaste con negocios parecidos al
-            suyo.
+            Un cliente ve una recomendación o un resultado en Google. Hace clic.
+            En segundos entiende qué hacés, para quién es y por qué elegirte. Ve
+            prueba de que trabajaste con negocios parecidos al suyo.
           </p>
           <p>
-            Hace clic en WhatsApp — pero no escribe "hola, consulta".
-            Escribe con una pregunta específica, ya medio convencido, con
-            el problema en la cabeza y la solución en la boca.
+            Hace clic en WhatsApp — pero no escribe "hola, consulta". Escribe
+            con una pregunta específica, ya medio convencido, con el problema en
+            la cabeza y la solución en la boca.
           </p>
         </div>
       </div>
@@ -561,6 +570,7 @@ git commit -m "Agrega la sección Lo que pasa cuando funciona"
 ## Task 7: Sección "Qué incluye cada proyecto"
 
 **Files:**
+
 - Create: `src/components/QueIncluye.jsx`
 - Modify: `src/App.jsx`
 - Modify: `src/styles/global.css`
@@ -661,6 +671,7 @@ git commit -m "Agrega la sección Qué incluye cada proyecto"
 ## Task 8: Sección "Cómo trabajamos"
 
 **Files:**
+
 - Create: `src/components/Proceso.jsx`
 - Modify: `src/App.jsx`
 - Modify: `src/styles/global.css`
@@ -786,6 +797,7 @@ git commit -m "Agrega la sección Cómo trabajamos"
 ## Task 9: Filosofía — reescritura + "Para quién es / no es"
 
 **Files:**
+
 - Modify: `src/components/Filosofia.jsx`
 - Modify: `src/styles/global.css`
 
@@ -819,10 +831,9 @@ export default function Filosofia() {
           <p>
             No empiezo por el diseño. Empiezo por entender cómo llega tu
             cliente, qué duda tiene y qué necesita leer para confiar. Esas
-            preguntas se responden antes de elegir un color o una
-            tipografía. Trabajo directamente con cada cliente, sin capas
-            ni intermediarios, desde la primera conversación hasta el
-            lanzamiento.
+            preguntas se responden antes de elegir un color o una tipografía.
+            Trabajo directamente con cada cliente, sin capas ni intermediarios,
+            desde la primera conversación hasta el lanzamiento.
           </p>
         </div>
         <div className="filosofia__paraquien">
@@ -934,6 +945,7 @@ git commit -m "Reescribe Filosofia y suma el bloque Para quién es / no es"
 ## Task 10: Sección "FAQ"
 
 **Files:**
+
 - Create: `src/components/Faq.jsx`
 - Modify: `src/App.jsx`
 - Modify: `src/styles/global.css`
@@ -1087,10 +1099,12 @@ git commit -m "Agrega la sección FAQ"
 ## Task 11: Contacto — copy y WhatsApp pre-cargado
 
 **Files:**
+
 - Modify: `src/components/Contacto.jsx`
 - Modify: `src/data/config.js`
 
 **Interfaces:**
+
 - Produces: `CONTACT.whatsappUrl` sigue siendo un string completo (ya incluye `?text=` codificado) — no cambia su tipo, solo su valor.
 
 - [ ] **Step 1: Modificar `src/data/config.js`**
@@ -1102,7 +1116,7 @@ export const CONTACT = {
   whatsappUrl:
     "https://wa.me/5493412665657?text=" +
     encodeURIComponent(
-      "Hola, vi SeronStudio y me gustaría consultar por una web para mi negocio."
+      "Hola, vi SeronStudio y me gustaría consultar por una web para mi negocio.",
     ),
 };
 
@@ -1146,6 +1160,7 @@ git commit -m "Actualiza el copy de Contacto y agrega mensaje de WhatsApp pre-ca
 ## Task 12: Footer — tagline nuevo
 
 **Files:**
+
 - Modify: `src/components/Footer.jsx`
 
 - [ ] **Step 1: Cambiar el tagline**
