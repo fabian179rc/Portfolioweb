@@ -24,7 +24,7 @@ export const servicios = [
   //     "Para negocios que quieren vender online o sumar un canal digital propio a lo presencial.",
   // },
   {
-    numero: "05",
+    numero: "04",
     nombre: "Rediseño y Optimización",
     descripcion:
       "Para negocios que ya tienen algo, pero no convierte, se ve viejo o no funciona bien en celular.",

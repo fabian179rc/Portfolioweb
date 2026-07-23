@@ -8,7 +8,6 @@ const ITEMS = [
   "Formulario de contacto",
   "Velocidad de carga optimizada",
   "SEO básico inicial",
-  "Soporte post-lanzamiento",
 ];
 
 export default function QueIncluye() {

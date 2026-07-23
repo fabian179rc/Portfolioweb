@@ -4,12 +4,12 @@ const PREGUNTAS = [
   {
     pregunta: "¿Cuánto tarda?",
     respuesta:
-      "Una landing de captación puede estar lista en una a dos semanas. Un sitio completo, en tres a cuatro. Todo con tiempos acordados antes de empezar.",
+      "Depende del tipo de web que necesite tu negocio. Landing de Captación, Sitio de Marca y Rediseño y Optimización están listos en 7 días. Un Sitio Institucional Completo, al tener más contenido, lleva un poco más de tiempo.",
   },
   {
     pregunta: "¿Qué pasa si no me gusta cómo queda?",
     respuesta:
-      "El proceso incluye revisiones. Ajustamos hasta que represente exactamente lo que querés comunicar. No entregamos algo sin que estés conforme.",
+      "El proceso incluye revisiones. Nuestro objetivo es que sientas que la web fue hecha exclusivamente para tu negocio.",
   },
   {
     pregunta: "¿Es para mi rubro?",
@@ -35,6 +35,11 @@ const PREGUNTAS = [
     pregunta: "¿Es cara?",
     respuesta:
       "Comparado con una plantilla gratuita, sí cuesta más. Comparado con lo que puede generar en consultas nuevas, generalmente se paga solo.",
+  },
+  {
+    pregunta: "¿Mi web me va a traer clientes?",
+    respuesta:
+      "Recordá que tu web incluye Posicionamiento SEO básico, para que aparezca en las búsquedas de Internet cuando alguien busque lo que ofrecés.",
   },
 ];
 

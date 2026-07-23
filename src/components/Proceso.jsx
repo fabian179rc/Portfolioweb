@@ -11,13 +11,13 @@ const PASOS = [
     numero: "02",
     titulo: "Diseño y desarrollo",
     texto:
-      "Construimos la página desde cero. Te mostramos avances, incorporamos feedback y ajustamos hasta que quede exacto.",
+      "Según lo que necesita tu negocio, diseñamos y te presentamos una primera versión para que la veas y nos digas qué ajustar, hasta con dos rondas de cambios incluidas.",
   },
   {
     numero: "03",
     titulo: "Lanzamiento y soporte",
     texto:
-      "Publicamos, te explicamos cómo funciona todo y quedamos disponibles para los primeros ajustes.",
+      "Levantamos tu web con hosting incluido por un año, con opciones de CRM y mejoras a medida para que tu negocio siga creciendo.",
   },
 ];
 

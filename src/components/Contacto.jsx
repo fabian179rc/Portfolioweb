@@ -43,7 +43,7 @@ export default function Contacto() {
     <section id="consulta" className="contacto" ref={ref}>
       <div className={`container contacto__grid ${revealClass(isVisible)}`}>
         <div className="contacto__intro">
-          <h2 className="section-title">
+          <h2 className="section-title text-accent">
             Empecemos hoy a traerte más clientes.
           </h2>
           {/* <p className="section-subtitle">
@@ -115,7 +115,7 @@ export default function Contacto() {
           >
             WhatsApp Directo →
           </a>
-          <p className="contacto__nota">Respuesta personal en menos de 24hs.</p>
+          <p className="contacto__nota">Respondemos en menos de 24hs.</p>
         </div>
       </div>
     </section>

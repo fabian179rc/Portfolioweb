@@ -6,11 +6,14 @@ export default function Inversion() {
   return (
     <section className="inversion" ref={ref}>
       <div className={`container inversion__inner ${revealClass(isVisible)}`}>
-        <h2 className="section-title">Invertí en tu web. Hacé crecer tu negocio.</h2>
+        <h2 className="section-title">
+          Invertí en tu web. <span className="text-accent">Hacé crecer tu negocio.</span>
+        </h2>
         <p>
-          La pregunta real no es si necesitás una web — es cuánto te está
-          costando no tenerla. Una página bien construida trabaja desde el
-          día uno, sin horarios y sin que vos tengas que explicar nada.
+          La pregunta real no es si necesitás una web —{" "}
+          <span className="text-accent">es cuánto te está costando no tenerla.</span>{" "}
+          Una página bien construida trabaja desde el día uno, sin
+          horarios y sin que vos tengas que explicar nada.
         </p>
       </div>
     </section>

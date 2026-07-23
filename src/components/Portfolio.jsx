@@ -8,8 +8,11 @@ export default function Portfolio() {
   return (
     <section id="portfolio" className="portfolio">
       <div className="container">
-        <div ref={headingRef} className={revealClass(headingVisible)}>
-          <h2 className="section-title">El Portfolio</h2>
+        <div
+          ref={headingRef}
+          className={`portfolio__heading ${revealClass(headingVisible)}`}
+        >
+          <h2 className="portfolio__kicker">El Portfolio</h2>
           <p className="section-subtitle">
             Una selección de trabajos recientes.
           </p>
