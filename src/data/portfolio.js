@@ -39,7 +39,8 @@ export const portfolio = [
     descripcion:
       "Landing de venta para un sistema de gestión integral de lashistas: seis tomos, bonos operativos y checkout con planes escalonados.",
     gradient: "linear-gradient(135deg, #3d2f1a 0%, #1a130a 100%)",
-    aspectRatio: "1578 / 887",
+    aspectRatio: "1015 / 709",
+    image: "/casos/sistema-360-lash/thumbnail.png",
     preview: "/casos/sistema-360-lash/index.html?v=2",
   },
   {
