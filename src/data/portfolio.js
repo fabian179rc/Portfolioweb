@@ -1,8 +1,3 @@
-import emergenciasImg from "../assets/portfolio/emergencias-hys.png";
-import heladosPandaImg from "../assets/portfolio/helados-panda.png";
-import ecosistemaImg from "../assets/portfolio/ecosistema-hys.png";
-import sistema360LashImg from "../assets/portfolio/sistema360lash.png";
-
 export const portfolio = [
   {
     numero: "01",
@@ -11,9 +6,8 @@ export const portfolio = [
     descripcion:
       "Landing de venta para un sistema de gestión de emergencias: storytelling de riesgo, prueba social y checkout con urgencia real.",
     gradient: "linear-gradient(135deg, #3a2317 0%, #1a1008 100%)",
-    image: emergenciasImg,
     aspectRatio: "6 / 5",
-    url: "https://maestrodeemergencias.tupuntodigital.shop/",
+    preview: "/casos/emergencias-hys/index.html",
   },
   {
     numero: "02",
@@ -22,9 +16,8 @@ export const portfolio = [
     descripcion:
       "Sitio de marca para un fabricante de helados y alfajores con 24 años en el mercado: catálogo de productos y pedidos directos por WhatsApp.",
     gradient: "linear-gradient(135deg, #1f2937 0%, #0b0f14 100%)",
-    image: heladosPandaImg,
     aspectRatio: "7 / 5",
-    url: "#",
+    preview: "/casos/helados-panda/index.html",
   },
   {
     numero: "03",
@@ -33,9 +26,8 @@ export const portfolio = [
     descripcion:
       "Catálogo hub que centraliza los sistemas HyS en una sola landing, con jerarquía clara entre productos disponibles y próximos lanzamientos.",
     gradient: "linear-gradient(135deg, #234035 0%, #0e1a15 100%)",
-    image: ecosistemaImg,
     aspectRatio: "1535 / 945",
-    url: "#",
+    preview: "/casos/ecosistema-hys/index.html",
   },
   {
     numero: "04",
@@ -44,9 +36,8 @@ export const portfolio = [
     descripcion:
       "Landing de venta para un sistema de gestión integral de lashistas: seis tomos, bonos operativos y checkout con planes escalonados.",
     gradient: "linear-gradient(135deg, #3d2f1a 0%, #1a130a 100%)",
-    image: sistema360LashImg,
     aspectRatio: "1578 / 887",
-    url: "https://lash.tera-ventasonline.shop/",
+    preview: "/casos/sistema-360-lash/index.html",
   },
   {
     numero: "05",
