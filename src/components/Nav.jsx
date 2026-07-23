@@ -23,7 +23,11 @@ export default function Nav() {
     <header className={`nav${scrolled ? " nav--scrolled" : ""}`}>
       <div className="container nav__inner">
         <a href="#top" className="nav__logo">
-          <img src="/assets/logo.jpeg" alt="Seron Studio" className="nav__logo-img" />
+          <img
+            src={`${import.meta.env.BASE_URL}assets/logo.jpeg`}
+            alt="Seron Studio"
+            className="nav__logo-img"
+          />
           SeronStudio
         </a>
         <nav className="nav__links">
