@@ -70,7 +70,8 @@ export const portfolio = [
     descripcion:
       "Landing institucional para un estudio jurídico: áreas de práctica, primera consulta sin cargo y prueba social basada en casos resueltos.",
     gradient: "linear-gradient(135deg, #0d1b2e 0%, #060d16 100%)",
-    aspectRatio: "3 / 2",
+    aspectRatio: "1018 / 769",
+    image: "/casos/abogados/thumbnail.png",
     preview: "/casos/abogados/index.html?v=2",
   },
   {
@@ -80,7 +81,8 @@ export const portfolio = [
     descripcion:
       "Sitio de marca para una inmobiliaria: catálogo de propiedades destacadas, tasación gratuita y contacto directo por WhatsApp.",
     gradient: "linear-gradient(135deg, #1c1815 0%, #0c0a08 100%)",
-    aspectRatio: "3 / 2",
+    aspectRatio: "1015 / 765",
+    image: "/casos/inmobiliaria/thumbnail.png",
     preview: "/casos/inmobiliaria/index.html?v=2",
   },
   {
@@ -90,7 +92,8 @@ export const portfolio = [
     descripcion:
       "Landing para una clínica veterinaria: turnos online, atención de urgencias 24hs y servicios detallados por especialidad.",
     gradient: "linear-gradient(135deg, #0f3d3e 0%, #061e1f 100%)",
-    aspectRatio: "3 / 2",
+    aspectRatio: "1020 / 776",
+    image: "/casos/veterinaria/thumbnail.png",
     preview: "/casos/veterinaria/index.html?v=2",
   },
   {
@@ -100,7 +103,8 @@ export const portfolio = [
     descripcion:
       "Landing institucional para un consultorio de psicología: tono cálido y confidencial, modalidades online y presencial, sin urgencia comercial.",
     gradient: "linear-gradient(135deg, #ece3d3 0%, #c9bea6 100%)",
-    aspectRatio: "3 / 2",
+    aspectRatio: "1033 / 770",
+    image: "/casos/psicologos/thumbnail.png",
     preview: "/casos/psicologos/index.html?v=2",
   },
 ];
