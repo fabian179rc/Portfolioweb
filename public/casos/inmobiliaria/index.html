@@ -227,12 +227,22 @@
       }
 
       .hero-property-media {
+        position: relative;
         height: 190px;
-        background: linear-gradient(135deg, #c4693a 0%, #4a220f 100%);
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         padding: 16px;
+        overflow: hidden;
+      }
+
+      .hero-property-media img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
       }
 
       .hero-property-body {
@@ -295,14 +305,27 @@
       }
 
       .propiedad-media {
+        position: relative;
         height: 160px;
         display: flex;
         align-items: flex-start;
         justify-content: flex-end;
         padding: 14px;
+        overflow: hidden;
+      }
+
+      .propiedad-media img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
       }
 
       .propiedad-tag {
+        position: relative;
+        z-index: 1;
         background: rgba(28, 24, 21, 0.75);
         color: var(--terracotta);
         font-size: 0.75rem;
@@ -504,6 +527,7 @@
         <div class="hero-visual">
           <div class="hero-property">
             <div class="hero-property-media">
+              <img src="images/casa-3-dormitorios.webp" alt="Casa 3 dormitorios en Zona Norte, con pileta" />
               <span class="propiedad-tag">Destacada</span>
             </div>
             <div class="hero-property-body">
@@ -524,7 +548,8 @@
         </p>
         <div class="propiedades-grid">
           <div class="propiedad-card">
-            <div class="propiedad-media" style="background: linear-gradient(135deg, #c4693a 0%, #6b3016 100%);">
+            <div class="propiedad-media">
+              <img src="images/departamento-2-ambientes.webp" alt="Interior del departamento 2 ambientes en el Centro" />
               <span class="propiedad-tag">En venta</span>
             </div>
             <div class="propiedad-body">
@@ -534,7 +559,8 @@
             </div>
           </div>
           <div class="propiedad-card">
-            <div class="propiedad-media" style="background: linear-gradient(135deg, #a4522a 0%, #3a1c0d 100%);">
+            <div class="propiedad-media">
+              <img src="images/casa-3-dormitorios.webp" alt="Casa 3 dormitorios en Zona Norte, con pileta" />
               <span class="propiedad-tag">En venta</span>
             </div>
             <div class="propiedad-body">
@@ -544,7 +570,8 @@
             </div>
           </div>
           <div class="propiedad-card">
-            <div class="propiedad-media" style="background: linear-gradient(135deg, #d9834f 0%, #5a2c15 100%);">
+            <div class="propiedad-media">
+              <img src="images/ph-a-estrenar.webp" alt="Terraza del PH a estrenar en Barrio Sur" />
               <span class="propiedad-tag">A estrenar</span>
             </div>
             <div class="propiedad-body">
@@ -554,7 +581,8 @@
             </div>
           </div>
           <div class="propiedad-card">
-            <div class="propiedad-media" style="background: linear-gradient(135deg, #8a4a28 0%, #2b1408 100%);">
+            <div class="propiedad-media">
+              <img src="images/local-comercial.png" alt="Interior del local comercial sobre Av. Principal" />
               <span class="propiedad-tag">En alquiler</span>
             </div>
             <div class="propiedad-body">
