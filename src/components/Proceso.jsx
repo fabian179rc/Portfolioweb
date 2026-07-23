@@ -11,7 +11,7 @@ const PASOS = [
     numero: "02",
     titulo: "Diseño y desarrollo",
     texto:
-      "Según lo que necesita tu negocio, diseñamos y te presentamos una primera versión para que la revises y nos indiques qué ajustar, hasta con dos rondas de cambios incluidas.",
+      "Según lo que necesita tu negocio, diseñamos y te presentamos una primera versión para que la revises y nos indiques qué ajustar.",
   },
   {
     numero: "03",
