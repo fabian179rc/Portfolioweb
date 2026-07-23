@@ -1,11 +1,17 @@
 import { useScrollReveal, revealClass } from "../hooks/useScrollReveal";
 
-const DIFERENCIALES = [
-  "Sin plantillas descargadas",
-  "Código limpio y escalable",
-  "Entrega en tiempo acordado",
-  "Soporte post-lanzamiento",
-  "Un cliente a la vez",
+const ES_PARA_VOS = [
+  "Tu web no existe o no te representa",
+  "Dependés de Instagram o recomendaciones",
+  "Explicás siempre lo mismo por WhatsApp",
+  "Querés clientes que lleguen más decididos",
+  "Buscás trato directo, sin intermediarios",
+];
+
+const NO_ES_PARA_VOS = [
+  "Buscás la opción más barata, sin importar el resultado",
+  "Querés una plantilla rápida sin estrategia",
+  "No podés dedicar tiempo a dar contexto del negocio",
 ];
 
 export default function Filosofia() {
@@ -15,22 +21,34 @@ export default function Filosofia() {
     <section id="filosofia" className="filosofia" ref={ref}>
       <div className={`container filosofia__grid ${revealClass(isVisible)}`}>
         <div className="filosofia__texto">
-          <h2 className="section-title">El estándar es el trabajo mismo.</h2>
+          <h2 className="section-title">La estrategia va primero.</h2>
           <p>
-            Trabajo directamente con cada cliente — sin capas, sin
-            intermediarios. Cada proyecto comienza con una pregunta: ¿qué
-            merece sentir esta marca? La respuesta da forma a cada pixel,
-            cada línea de código y cada conversión.
+            No empiezo por el diseño. Empiezo por entender cómo llega tu
+            cliente, qué duda tiene y qué necesita leer para confiar. Esas
+            preguntas se responden antes de elegir un color o una
+            tipografía. Trabajo directamente con cada cliente, sin capas
+            ni intermediarios, desde la primera conversación hasta el
+            lanzamiento.
           </p>
         </div>
-        <ul className="filosofia__lista">
-          {DIFERENCIALES.map((item) => (
-            <li key={item}>
-              <span className="filosofia__punto" aria-hidden="true" />
-              {item}
-            </li>
-          ))}
-        </ul>
+        <div className="filosofia__paraquien">
+          <div className="filosofia__col filosofia__col--si">
+            <h3>Es para vos si</h3>
+            <ul>
+              {ES_PARA_VOS.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="filosofia__col filosofia__col--no">
+            <h3>No es para vos si</h3>
+            <ul>
+              {NO_ES_PARA_VOS.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 const FOOTER_LINKS = [
   { href: "#portfolio", label: "Portafolio" },
+  { href: "#problema", label: "El Problema" },
   { href: "#servicios", label: "Servicios" },
   { href: "#filosofia", label: "Filosofía" },
   { href: "#consulta", label: "Consulta" },
@@ -11,7 +12,7 @@ export default function Footer() {
       <div className="container footer__inner">
         <div>
           <p className="footer__logo">SeronStudio</p>
-          <p className="footer__tagline">Estudio Digital a Medida</p>
+          <p className="footer__tagline">La página que trabaja antes que vos.</p>
         </div>
         <nav className="footer__links">
           {FOOTER_LINKS.map((link) => (

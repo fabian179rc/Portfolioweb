@@ -43,7 +43,7 @@ export default function Contacto() {
     <section id="consulta" className="contacto" ref={ref}>
       <div className={`container contacto__grid ${revealClass(isVisible)}`}>
         <div className="contacto__intro">
-          <h2 className="section-title">Hablemos.</h2>
+          <h2 className="section-title">¿Le damos forma a tu presencia online?</h2>
           <p className="section-subtitle">
             Cada proyecto merece una conversación real.
           </p>
