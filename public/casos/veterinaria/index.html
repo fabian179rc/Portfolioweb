@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vitalpet: veterinaria con turnos online y atención de urgencias. Cuidamos a tu mascota como parte de la familia."
+    />
+    <title>Vitalpet | Veterinaria — Turnos y Urgencias</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #0f3d3e;
+        --bg-alt: #133f40;
+        --bg-card: #103537;
+        --peach: #f2a679;
+        --peach-dark: #d98858;
+        --text: #f3ede4;
+        --text-dim: #b9d3d2;
+        --border: rgba(242, 166, 121, 0.22);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height: 1.5;
+      }
+
+      h1, h2, h3, .brand {
+        font-family: "Manrope", sans-serif;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .btn-call {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, var(--peach) 0%, var(--peach-dark) 100%);
+        color: #2b1607;
+        font-weight: 700;
+        padding: 14px 28px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-size: 1rem;
+        white-space: nowrap;
+        box-shadow: 0 8px 24px rgba(242, 166, 121, 0.25);
+      }
+
+      .btn-call--small {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+      }
+
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: var(--peach);
+        font-weight: 700;
+        padding: 13px 26px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(19, 63, 64, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        gap: 16px;
+      }
+
+      .brand {
+        font-weight: 800;
+        font-size: 1.15rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .brand span {
+        color: var(--peach);
+      }
+
+      .hero {
+        padding: 72px 0 56px;
+        background: radial-gradient(circle at 20% 10%, rgba(242, 166, 121, 0.14), transparent 55%);
+        text-align: center;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        color: var(--peach);
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 999px;
+        margin-bottom: 24px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        max-width: 760px;
+        margin: 0 auto 20px;
+        line-height: 1.2;
+      }
+
+      .hero p.subtitle {
+        color: var(--text-dim);
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto 32px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+        margin-bottom: 40px;
+      }
+
+      .trust-badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .trust-badge {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        padding: 10px 16px;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        color: var(--text-dim);
+      }
+
+      section {
+        padding: 64px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        color: var(--text-dim);
+        max-width: 560px;
+        margin: 0 auto 44px;
+      }
+
+      .grid-5 {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 18px;
+      }
+
+      @media (max-width: 900px) {
+        .grid-5 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 520px) {
+        .grid-5 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      @media (max-width: 900px) {
+        .grid-4 {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .grid-4 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 26px 22px;
+        text-align: center;
+      }
+
+      .card .icon {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      .card h4 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+      }
+
+      .card p {
+        color: var(--text-dim);
+        font-size: 0.85rem;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      @media (max-width: 900px) {
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .stars {
+        color: var(--peach);
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+      }
+
+      .testimonio-card p.quote {
+        color: var(--text-dim);
+        font-size: 0.92rem;
+        margin-bottom: 14px;
+      }
+
+      .testimonio-card .autor {
+        font-weight: 700;
+        font-size: 0.88rem;
+      }
+
+      .disponibilidad {
+        background: var(--bg-alt);
+        text-align: center;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .disponibilidad .big {
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      .disponibilidad p {
+        color: var(--text-dim);
+      }
+
+      .cta-final-wrap {
+        padding: 64px 0;
+      }
+
+      .cta-final {
+        background: linear-gradient(135deg, var(--peach) 0%, var(--peach-dark) 100%);
+        color: #2b1607;
+        text-align: center;
+        border-radius: 24px;
+        margin: 0 24px;
+        padding: 56px 24px;
+      }
+
+      .cta-final h2 {
+        font-size: clamp(1.6rem, 4vw, 2.2rem);
+        margin-bottom: 12px;
+      }
+
+      .cta-final p {
+        margin-bottom: 28px;
+        font-weight: 600;
+        opacity: 0.85;
+      }
+
+      .cta-final-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .cta-final .btn-outline {
+        color: #2b1607;
+        border-color: rgba(43, 22, 7, 0.3);
+      }
+
+      footer {
+        background: var(--bg-alt);
+        padding: 48px 0 32px;
+      }
+
+      .footer-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 24px;
+      }
+
+      .footer-grid .brand {
+        margin-bottom: 8px;
+      }
+
+      footer .legal {
+        color: var(--text-dim);
+        font-size: 0.82rem;
+        max-width: 420px;
+      }
+
+      footer .contacto {
+        color: var(--text-dim);
+        font-size: 0.9rem;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .copyright {
+        border-top: 1px solid var(--border);
+        padding-top: 20px;
+        color: var(--text-dim);
+        font-size: 0.8rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="brand">🐾 <span>Vitalpet</span></div>
+        <a class="btn-call btn-call--small" href="https://wa.me/5493415550400">💬 Sacar turno</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <span class="badge">🕐 Urgencias las 24hs</span>
+        <h1>Cuidamos a tu mascota como parte de tu familia</h1>
+        <p class="subtitle">
+          Consultas, vacunación, cirugías y atención de urgencias con turno
+          online.
+        </p>
+        <div class="hero-actions">
+          <a class="btn-call" href="https://wa.me/5493415550400">💬 Sacar turno por WhatsApp</a>
+          <a class="btn-outline" href="tel:+5493415550400">📞 Emergencia: (341) 555-0400</a>
+        </div>
+        <div class="trust-badges">
+          <span class="trust-badge">🐕 +18 años de experiencia</span>
+          <span class="trust-badge">🚨 Guardia de urgencias 24hs</span>
+          <span class="trust-badge">✅ Veterinarios matriculados</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Servicios</h2>
+        <div class="grid-5">
+          <div class="card">
+            <span class="icon">🩺</span>
+            <h4>Consultas clínicas</h4>
+          </div>
+          <div class="card">
+            <span class="icon">💉</span>
+            <h4>Vacunación y desparasitación</h4>
+          </div>
+          <div class="card">
+            <span class="icon">🏥</span>
+            <h4>Cirugías</h4>
+          </div>
+          <div class="card">
+            <span class="icon">🛏️</span>
+            <h4>Internación</h4>
+          </div>
+          <div class="card">
+            <span class="icon">✂️</span>
+            <h4>Peluquería y estética</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Por qué elegirnos</h2>
+        <div class="grid-4">
+          <div class="card">
+            <span class="icon">📅</span>
+            <h4>Turnos online sin esperas</h4>
+            <p>Reservá desde WhatsApp en minutos.</p>
+          </div>
+          <div class="card">
+            <span class="icon">🚨</span>
+            <h4>Guardia de urgencias 24hs</h4>
+            <p>Todos los días del año.</p>
+          </div>
+          <div class="card">
+            <span class="icon">🔬</span>
+            <h4>Equipamiento propio</h4>
+            <p>Diagnóstico rápido en el lugar.</p>
+          </div>
+          <div class="card">
+            <span class="icon">❤️</span>
+            <h4>Trato cercano</h4>
+            <p>Atención personalizada para cada mascota.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        <div class="grid-3">
+          <div class="card testimonio-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">
+              "Atendieron a Rocco un domingo a la noche sin dudarlo."
+            </p>
+            <div class="autor">— Valeria S. (dueña de Rocco)</div>
+          </div>
+          <div class="card testimonio-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">
+              "El seguimiento post cirugía de Milo fue impecable."
+            </p>
+            <div class="autor">— Ezequiel N. (dueño de Milo)</div>
+          </div>
+          <div class="card testimonio-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">
+              "Siempre nos explican todo con calma antes de cada
+              tratamiento."
+            </p>
+            <div class="autor">— Familia Duarte (dueños de Cleo)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="disponibilidad">
+      <div class="container">
+        <div class="big">24/7 · Guardia de urgencias todos los días</div>
+        <p>Atendemos emergencias en el momento, sin turno previo</p>
+      </div>
+    </section>
+
+    <section class="cta-final-wrap">
+      <div class="container">
+        <div class="cta-final">
+          <h2>¿Tu mascota necesita atención?</h2>
+          <p>Turnos por WhatsApp o llamada directa para emergencias.</p>
+          <div class="cta-final-actions">
+            <a class="btn-call" href="https://wa.me/5493415550400">💬 Sacar turno</a>
+            <a class="btn-outline" href="tel:+5493415550400">📞 Llamar ahora</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="brand">🐾 <span>Vitalpet</span></div>
+            <p class="legal">Matrícula veterinaria N° 6023.</p>
+          </div>
+          <div class="contacto">
+            <span>💬 +54 9 341 555-0400</span>
+            <span>✉️ contacto@vitalpet.com.ar</span>
+          </div>
+        </div>
+        <div class="copyright">© 2026 Vitalpet. Todos los derechos reservados.</div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        document.addEventListener(
+          "click",
+          function (e) {
+            var link = e.target.closest("a");
+            if (link) e.preventDefault();
+          },
+          true
+        );
+        document.addEventListener(
+          "submit",
+          function (e) {
+            e.preventDefault();
+          },
+          true
+        );
+      })();
+    </script>
+  </body>
+</html>

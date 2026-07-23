@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Horizonte Propiedades: venta, alquiler y tasación gratuita de propiedades. Encontrá tu próximo hogar o inversión."
+    />
+    <title>Horizonte Propiedades | Venta, Alquiler y Tasaciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #1c1815;
+        --bg-alt: #241f1a;
+        --bg-card: #201b17;
+        --terracotta: #c4693a;
+        --terracotta-dark: #a4522a;
+        --text: #f3ece3;
+        --text-dim: #bfb2a3;
+        --border: rgba(196, 105, 58, 0.2);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height: 1.5;
+      }
+
+      h1, h2, h3, .brand {
+        font-family: "Manrope", sans-serif;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .btn-call {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-dark) 100%);
+        color: #fff6ee;
+        font-weight: 700;
+        padding: 14px 28px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-size: 1rem;
+        white-space: nowrap;
+        box-shadow: 0 8px 24px rgba(196, 105, 58, 0.28);
+      }
+
+      .btn-call--small {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+      }
+
+      .btn-outline {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: transparent;
+        color: var(--terracotta);
+        font-weight: 700;
+        padding: 13px 26px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(36, 31, 26, 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
+
+      header .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        gap: 16px;
+      }
+
+      .brand {
+        font-weight: 800;
+        font-size: 1.15rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .brand span {
+        color: var(--terracotta);
+      }
+
+      .hero {
+        padding: 72px 0 56px;
+        background: radial-gradient(circle at 80% 15%, rgba(196, 105, 58, 0.14), transparent 55%);
+        text-align: center;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        color: var(--terracotta);
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding: 8px 16px;
+        border-radius: 999px;
+        margin-bottom: 24px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        max-width: 760px;
+        margin: 0 auto 20px;
+        line-height: 1.2;
+      }
+
+      .hero p.subtitle {
+        color: var(--text-dim);
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto 32px;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+        margin-bottom: 40px;
+      }
+
+      .trust-badges {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .trust-badge {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        padding: 10px 16px;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        color: var(--text-dim);
+      }
+
+      section {
+        padding: 64px 0;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        color: var(--text-dim);
+        max-width: 560px;
+        margin: 0 auto 44px;
+      }
+
+      /* Propiedades */
+      .propiedades-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+      }
+
+      @media (max-width: 720px) {
+        .propiedades-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .propiedad-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        overflow: hidden;
+      }
+
+      .propiedad-media {
+        height: 160px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 14px;
+      }
+
+      .propiedad-tag {
+        background: rgba(28, 24, 21, 0.75);
+        color: var(--terracotta);
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 6px 12px;
+        border-radius: 999px;
+      }
+
+      .propiedad-body {
+        padding: 18px 20px 22px;
+      }
+
+      .propiedad-body h4 {
+        font-size: 1.05rem;
+        margin-bottom: 6px;
+      }
+
+      .propiedad-price {
+        color: var(--terracotta);
+        font-weight: 800;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+      }
+
+      .propiedad-meta {
+        color: var(--text-dim);
+        font-size: 0.82rem;
+        display: flex;
+        gap: 14px;
+      }
+
+      /* Grids compartidos */
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      @media (max-width: 900px) {
+        .grid-4 {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 520px) {
+        .grid-4 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .card {
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        padding: 26px 22px;
+      }
+
+      .card .icon {
+        font-size: 1.6rem;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      .card h4 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+      }
+
+      .card p {
+        color: var(--text-dim);
+        font-size: 0.88rem;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      @media (max-width: 900px) {
+        .grid-3 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .stars {
+        color: var(--terracotta);
+        margin-bottom: 12px;
+        font-size: 0.95rem;
+      }
+
+      .testimonio-card p.quote {
+        color: var(--text-dim);
+        font-size: 0.92rem;
+        margin-bottom: 14px;
+      }
+
+      .testimonio-card .autor {
+        font-weight: 700;
+        font-size: 0.88rem;
+      }
+
+      .cta-final-wrap {
+        padding: 0 0 64px;
+      }
+
+      .cta-final {
+        background: linear-gradient(135deg, var(--terracotta) 0%, var(--terracotta-dark) 100%);
+        color: #fff6ee;
+        text-align: center;
+        border-radius: 24px;
+        margin: 0 24px;
+        padding: 56px 24px;
+      }
+
+      .cta-final h2 {
+        font-size: clamp(1.6rem, 4vw, 2.2rem);
+        margin-bottom: 12px;
+      }
+
+      .cta-final p {
+        margin-bottom: 28px;
+        font-weight: 600;
+        opacity: 0.9;
+      }
+
+      .cta-final .btn-call {
+        background: #1c1815;
+        color: var(--terracotta);
+        box-shadow: none;
+      }
+
+      footer {
+        background: var(--bg-alt);
+        padding: 48px 0 32px;
+      }
+
+      .footer-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 24px;
+      }
+
+      .footer-grid .brand {
+        margin-bottom: 8px;
+      }
+
+      footer .legal {
+        color: var(--text-dim);
+        font-size: 0.82rem;
+        max-width: 420px;
+      }
+
+      footer .contacto {
+        color: var(--text-dim);
+        font-size: 0.9rem;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .copyright {
+        border-top: 1px solid var(--border);
+        padding-top: 20px;
+        color: var(--text-dim);
+        font-size: 0.8rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="brand">🏠 Horizonte <span>Propiedades</span></div>
+        <a class="btn-call btn-call--small" href="https://wa.me/5493415550300">💬 Hablar por WhatsApp</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <span class="badge">Tasación 100% gratuita</span>
+        <h1>Encontrá el lugar donde va a empezar tu próxima etapa</h1>
+        <p class="subtitle">
+          Venta, alquiler e inversión inmobiliaria con acompañamiento en
+          cada paso.
+        </p>
+        <div class="hero-actions">
+          <a class="btn-call" href="https://wa.me/5493415550300">💬 Hablar por WhatsApp</a>
+          <a class="btn-outline" href="#tasacion">Tasá tu propiedad</a>
+        </div>
+        <div class="trust-badges">
+          <span class="trust-badge">🏘️ +300 propiedades operadas</span>
+          <span class="trust-badge">📋 Matrícula CUCICBA</span>
+          <span class="trust-badge">⏱️ Tasación sin cargo en 48hs</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Propiedades destacadas</h2>
+        <p class="section-subtitle">
+          Una selección de nuestra cartera actual, actualizada cada semana.
+        </p>
+        <div class="propiedades-grid">
+          <div class="propiedad-card">
+            <div class="propiedad-media" style="background: linear-gradient(135deg, #c4693a 0%, #6b3016 100%);">
+              <span class="propiedad-tag">En venta</span>
+            </div>
+            <div class="propiedad-body">
+              <h4>Departamento 2 ambientes — Centro</h4>
+              <div class="propiedad-price">USD 78.000</div>
+              <div class="propiedad-meta"><span>2 amb</span><span>52m²</span></div>
+            </div>
+          </div>
+          <div class="propiedad-card">
+            <div class="propiedad-media" style="background: linear-gradient(135deg, #a4522a 0%, #3a1c0d 100%);">
+              <span class="propiedad-tag">En venta</span>
+            </div>
+            <div class="propiedad-body">
+              <h4>Casa 3 dormitorios — Zona Norte</h4>
+              <div class="propiedad-price">USD 145.000</div>
+              <div class="propiedad-meta"><span>3 dorm</span><span>180m²</span></div>
+            </div>
+          </div>
+          <div class="propiedad-card">
+            <div class="propiedad-media" style="background: linear-gradient(135deg, #d9834f 0%, #5a2c15 100%);">
+              <span class="propiedad-tag">A estrenar</span>
+            </div>
+            <div class="propiedad-body">
+              <h4>PH a estrenar — Barrio Sur</h4>
+              <div class="propiedad-price">USD 92.000</div>
+              <div class="propiedad-meta"><span>3 amb</span><span>95m²</span></div>
+            </div>
+          </div>
+          <div class="propiedad-card">
+            <div class="propiedad-media" style="background: linear-gradient(135deg, #8a4a28 0%, #2b1408 100%);">
+              <span class="propiedad-tag">En alquiler</span>
+            </div>
+            <div class="propiedad-body">
+              <h4>Local comercial — Av. Principal</h4>
+              <div class="propiedad-price">$450.000/mes</div>
+              <div class="propiedad-meta"><span>60m²</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Servicios</h2>
+        <div class="grid-4">
+          <div class="card">
+            <span class="icon">🏷️</span>
+            <h4>Venta de propiedades</h4>
+            <p>Acompañamiento completo hasta la escritura.</p>
+          </div>
+          <div class="card">
+            <span class="icon">🔑</span>
+            <h4>Alquileres</h4>
+            <p>Con garantía y contrato asesorado.</p>
+          </div>
+          <div class="card">
+            <span class="icon">📐</span>
+            <h4>Tasaciones gratuitas</h4>
+            <p>Valor de mercado en menos de 48hs.</p>
+          </div>
+          <div class="card">
+            <span class="icon">📈</span>
+            <h4>Asesoramiento en inversión</h4>
+            <p>Oportunidades evaluadas por el equipo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tasacion">
+      <div class="container">
+        <h2 class="section-title">Por qué elegirnos</h2>
+        <div class="grid-4">
+          <div class="card">
+            <span class="icon">⏱️</span>
+            <h4>Tasación gratuita en 48hs</h4>
+            <p>Respuesta rápida, sin cargo ni compromiso.</p>
+          </div>
+          <div class="card">
+            <span class="icon">🤝</span>
+            <h4>Acompañamiento completo</h4>
+            <p>Te guiamos en toda la operación.</p>
+          </div>
+          <div class="card">
+            <span class="icon">🏘️</span>
+            <h4>+300 propiedades</h4>
+            <p>Amplia cartera activa en la zona.</p>
+          </div>
+          <div class="card">
+            <span class="icon">✅</span>
+            <h4>Matriculados en CUCICBA</h4>
+            <p>Operación segura y respaldada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+        <div class="grid-3">
+          <div class="card testimonio-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">
+              "Vendieron mi departamento en menos de un mes al precio que
+              esperaba."
+            </p>
+            <div class="autor">— Nicolás T.</div>
+          </div>
+          <div class="card testimonio-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">
+              "Nos ayudaron a encontrar la casa ideal para la familia sin
+              apuro."
+            </p>
+            <div class="autor">— Familia Ledesma</div>
+          </div>
+          <div class="card testimonio-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">
+              "La tasación fue rápida y muy profesional."
+            </p>
+            <div class="autor">— Agustina V.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final-wrap">
+      <div class="container">
+        <div class="cta-final">
+          <h2>¿Querés tasar tu propiedad?</h2>
+          <p>Sin cargo, sin compromiso.</p>
+          <a class="btn-call" href="https://wa.me/5493415550300">💬 Pedir tasación</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="brand">🏠 Horizonte <span>Propiedades</span></div>
+            <p class="legal">Matrícula CUCICBA N° 8821.</p>
+          </div>
+          <div class="contacto">
+            <span>💬 +54 9 341 555-0300</span>
+            <span>✉️ info@horizontepropiedades.com.ar</span>
+          </div>
+        </div>
+        <div class="copyright">© 2026 Horizonte Propiedades. Todos los derechos reservados.</div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        document.addEventListener(
+          "click",
+          function (e) {
+            var link = e.target.closest("a");
+            if (link) e.preventDefault();
+          },
+          true
+        );
+        document.addEventListener(
+          "submit",
+          function (e) {
+            e.preventDefault();
+          },
+          true
+        );
+      })();
+    </script>
+  </body>
+</html>
