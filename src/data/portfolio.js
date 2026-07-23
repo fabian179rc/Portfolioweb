@@ -17,7 +17,8 @@ export const portfolio = [
     descripcion:
       "Sitio de marca para un fabricante de helados y alfajores con 24 años en el mercado: catálogo de productos y pedidos directos por WhatsApp.",
     gradient: "linear-gradient(135deg, #1f2937 0%, #0b0f14 100%)",
-    aspectRatio: "7 / 5",
+    aspectRatio: "1057 / 774",
+    image: "/casos/helados-panda/thumbnail.png",
     preview: "/casos/helados-panda/index.html",
   },
   {
