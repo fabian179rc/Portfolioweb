@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { createPortal } from "react-dom";
 
 export default function PortfolioPreviewModal({ caso, onClose }) {
   useEffect(() => {
@@ -13,7 +14,7 @@ export default function PortfolioPreviewModal({ caso, onClose }) {
     };
   }, [onClose]);
 
-  return (
+  return createPortal(
     <div className="preview-modal-overlay" onClick={onClose}>
       <div
         className="preview-modal"
@@ -39,6 +40,7 @@ export default function PortfolioPreviewModal({ caso, onClose }) {
           title={caso.nombre}
         />
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
