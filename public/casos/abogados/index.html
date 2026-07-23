@@ -112,8 +112,10 @@
       }
 
       .brand {
-        font-weight: 800;
-        font-size: 1.15rem;
+        font-weight: 700;
+        font-size: 1.05rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
         display: flex;
         align-items: center;
         gap: 8px;
@@ -292,43 +294,70 @@
         margin: 0 auto 44px;
       }
 
-      .grid-4 {
+      /* Lista editorial de áreas de práctica */
+      .practice-list {
+        max-width: 780px;
+        margin: 0 auto;
+      }
+
+      .practice-item {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
+        grid-template-columns: 64px 1fr;
+        gap: 24px;
+        padding: 28px 0;
+        border-bottom: 1px solid var(--border);
       }
 
-      @media (max-width: 900px) {
-        .grid-4 {
-          grid-template-columns: 1fr 1fr;
-        }
+      .practice-item:first-child {
+        padding-top: 0;
       }
 
-      @media (max-width: 520px) {
-        .grid-4 {
-          grid-template-columns: 1fr;
-        }
+      .practice-item:last-child {
+        border-bottom: none;
       }
 
-      .card {
-        background: var(--bg-card);
-        border: 1px solid var(--border);
-        border-radius: 16px;
-        padding: 26px 22px;
+      .practice-num {
+        font-family: "Playfair Display", serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--gold);
+        line-height: 1;
       }
 
-      .card .icon {
-        font-size: 1.6rem;
-        margin-bottom: 12px;
-        display: block;
+      .practice-item h4 {
+        font-family: "Playfair Display", serif;
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin-bottom: 6px;
       }
 
-      .card h4 {
-        font-size: 1rem;
+      .practice-item p {
+        color: var(--text-dim);
+        font-size: 0.9rem;
+      }
+
+      /* Franja de diferenciales, sin cajas */
+      .diferenciales-strip {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+      }
+
+      .diferencial-item {
+        flex: 1 1 220px;
+        border-top: 2px solid var(--gold);
+        padding-top: 18px;
+      }
+
+      .diferencial-item h4 {
+        font-size: 0.92rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
         margin-bottom: 8px;
       }
 
-      .card p {
+      .diferencial-item p {
         color: var(--text-dim);
         font-size: 0.88rem;
       }
@@ -336,7 +365,7 @@
       .grid-3 {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: 32px;
       }
 
       @media (max-width: 900px) {
@@ -345,48 +374,44 @@
         }
       }
 
-      .stars {
-        color: var(--gold);
-        margin-bottom: 12px;
-        font-size: 0.95rem;
+      .testimonio-card {
+        border-left: 2px solid var(--gold);
+        padding-left: 20px;
       }
 
       .testimonio-card p.quote {
         color: var(--text-dim);
-        font-size: 0.92rem;
+        font-size: 0.94rem;
+        font-style: italic;
         margin-bottom: 14px;
       }
 
       .testimonio-card .autor {
         font-weight: 700;
-        font-size: 0.88rem;
+        font-size: 0.85rem;
+        letter-spacing: 0.02em;
       }
 
       .equipo-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 48px;
         max-width: 700px;
         margin: 0 auto;
       }
 
-      @media (max-width: 640px) {
-        .equipo-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
       .equipo-card {
-        background: var(--bg-card);
-        border: 1px solid var(--border);
-        border-radius: 16px;
-        padding: 26px;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        text-align: left;
       }
 
       .avatar-circle {
-        width: 64px;
-        height: 64px;
+        flex-shrink: 0;
+        width: 56px;
+        height: 56px;
         border-radius: 50%;
         background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
         color: #1a1204;
@@ -394,12 +419,12 @@
         align-items: center;
         justify-content: center;
         font-weight: 800;
-        margin: 0 auto 14px;
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
 
       .equipo-card h4 {
-        margin-bottom: 4px;
+        margin-bottom: 2px;
+        font-size: 0.98rem;
       }
 
       .equipo-card p {
@@ -480,8 +505,8 @@
   <body>
     <header>
       <div class="container">
-        <div class="brand">⚖ Bianchi &amp; <span>Asociados</span></div>
-        <a class="btn-call btn-call--small" href="https://wa.me/5493415550200">💬 Consulta por WhatsApp</a>
+        <div class="brand">Bianchi &amp; <span>Asociados</span></div>
+        <a class="btn-call btn-call--small" href="https://wa.me/5493415550200">Consulta por WhatsApp</a>
       </div>
     </header>
 
@@ -495,12 +520,12 @@
             accidentes de tránsito.
           </p>
           <div class="hero-actions">
-            <a class="btn-call" href="https://wa.me/5493415550200">💬 Consultar por WhatsApp</a>
+            <a class="btn-call" href="https://wa.me/5493415550200">Consultar por WhatsApp</a>
             <a class="btn-outline" href="#areas">Ver áreas de práctica</a>
           </div>
           <div class="trust-badges">
-            <span class="trust-badge">⚖️ +15 años de trayectoria</span>
-            <span class="trust-badge">✅ Colegio de Abogados matriculado</span>
+            <span class="trust-badge">+15 años de trayectoria</span>
+            <span class="trust-badge">Colegio de Abogados matriculado</span>
           </div>
         </div>
         <div class="hero-visual">
@@ -521,26 +546,34 @@
           Asesoramiento integral en los reclamos más frecuentes, con
           seguimiento personalizado de cada caso.
         </p>
-        <div class="grid-4">
-          <div class="card">
-            <span class="icon">💼</span>
-            <h4>Derecho Laboral</h4>
-            <p>Despidos, indemnizaciones y accidentes de trabajo.</p>
+        <div class="practice-list">
+          <div class="practice-item">
+            <span class="practice-num">01</span>
+            <div>
+              <h4>Derecho Laboral</h4>
+              <p>Despidos, indemnizaciones y accidentes de trabajo.</p>
+            </div>
           </div>
-          <div class="card">
-            <span class="icon">👨‍👩‍👧</span>
-            <h4>Derecho de Familia</h4>
-            <p>Divorcios, alimentos y sucesiones.</p>
+          <div class="practice-item">
+            <span class="practice-num">02</span>
+            <div>
+              <h4>Derecho de Familia</h4>
+              <p>Divorcios, alimentos y sucesiones.</p>
+            </div>
           </div>
-          <div class="card">
-            <span class="icon">🚗</span>
-            <h4>Accidentes de Tránsito</h4>
-            <p>Reclamos a aseguradoras, daños y perjuicios.</p>
+          <div class="practice-item">
+            <span class="practice-num">03</span>
+            <div>
+              <h4>Accidentes de Tránsito</h4>
+              <p>Reclamos a aseguradoras, daños y perjuicios.</p>
+            </div>
           </div>
-          <div class="card">
-            <span class="icon">📄</span>
-            <h4>Civil y Comercial</h4>
-            <p>Contratos, deudas y defensa del consumidor.</p>
+          <div class="practice-item">
+            <span class="practice-num">04</span>
+            <div>
+              <h4>Civil y Comercial</h4>
+              <p>Contratos, deudas y defensa del consumidor.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -549,24 +582,20 @@
     <section>
       <div class="container">
         <h2 class="section-title">Por qué elegirnos</h2>
-        <div class="grid-4">
-          <div class="card">
-            <span class="icon">🆓</span>
+        <div class="diferenciales-strip">
+          <div class="diferencial-item">
             <h4>Primera consulta sin cargo</h4>
             <p>Evaluamos tu caso antes de que decidas avanzar.</p>
           </div>
-          <div class="card">
-            <span class="icon">⚖️</span>
+          <div class="diferencial-item">
             <h4>+15 años de trayectoria</h4>
             <p>Experiencia real en los tribunales de la zona.</p>
           </div>
-          <div class="card">
-            <span class="icon">🔍</span>
+          <div class="diferencial-item">
             <h4>Seguimiento personalizado</h4>
             <p>Te acompañamos en cada etapa del proceso.</p>
           </div>
-          <div class="card">
-            <span class="icon">💳</span>
+          <div class="diferencial-item">
             <h4>Honorarios claros</h4>
             <p>Sin sorpresas, todo acordado por escrito.</p>
           </div>
@@ -578,24 +607,21 @@
       <div class="container">
         <h2 class="section-title">Lo que dicen nuestros clientes</h2>
         <div class="grid-3">
-          <div class="card testimonio-card">
-            <div class="stars">★★★★★</div>
+          <div class="testimonio-card">
             <p class="quote">
               "Me asesoraron en todo el proceso de mi despido y conseguimos
               una indemnización justa."
             </p>
             <div class="autor">— Roberto A.</div>
           </div>
-          <div class="card testimonio-card">
-            <div class="stars">★★★★★</div>
+          <div class="testimonio-card">
             <p class="quote">
               "Llevaron mi sucesión de principio a fin sin que tuviera que
               preocuparme por nada."
             </p>
             <div class="autor">— Susana M.</div>
           </div>
-          <div class="card testimonio-card">
-            <div class="stars">★★★★★</div>
+          <div class="testimonio-card">
             <p class="quote">
               "Rapidez y claridad en cada paso del reclamo por el
               accidente."
@@ -629,7 +655,7 @@
         <div class="cta-final">
           <h2>¿Tenés una consulta legal?</h2>
           <p>Respondemos en el día.</p>
-          <a class="btn-call" href="https://wa.me/5493415550200">💬 Escribinos por WhatsApp</a>
+          <a class="btn-call" href="https://wa.me/5493415550200">Escribinos por WhatsApp</a>
         </div>
       </div>
     </section>
@@ -638,12 +664,12 @@
       <div class="container">
         <div class="footer-grid">
           <div>
-            <div class="brand">⚖ Bianchi &amp; <span>Asociados</span></div>
+            <div class="brand">Bianchi &amp; <span>Asociados</span></div>
             <p class="legal">Tomo 45 Folio 112 — Colegio de Abogados.</p>
           </div>
           <div class="contacto">
-            <span>💬 +54 9 341 555-0200</span>
-            <span>✉️ contacto@bianchiasociados.com.ar</span>
+            <span>+54 9 341 555-0200</span>
+            <span>contacto@bianchiasociados.com.ar</span>
           </div>
         </div>
         <div class="copyright">© 2026 Bianchi &amp; Asociados. Todos los derechos reservados.</div>
