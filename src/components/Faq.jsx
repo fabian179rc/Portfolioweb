@@ -49,7 +49,7 @@ export default function Faq() {
   return (
     <section id="faq" className="faq" ref={ref}>
       <div className={`container ${revealClass(isVisible)}`}>
-        <h2 className="section-title text-accent">Preguntas frecuentes</h2>
+        <h2 className="section-title text-accent faq__titulo">Preguntas frecuentes</h2>
         <div className="faq__lista">
           {PREGUNTAS.map(({ pregunta, respuesta }) => (
             <details key={pregunta} className="faq__item">
