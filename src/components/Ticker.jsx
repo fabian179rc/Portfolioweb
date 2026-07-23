@@ -1,10 +1,8 @@
 const TICKER_ITEMS = [
-  "Diseño a Medida",
-  "Desarrollo Web",
-  "SEO",
-  "Mobile-First",
-  "Sin Plantillas",
-  "Resultados Medibles",
+  "Tu web debería convencer antes de que abran la boca",
+  "Instagram te da seguidores. Una web te da clientes",
+  "No diseño páginas bonitas. Diseño páginas que convierten",
+  "Hecha a mano. Pensada para vos",
 ];
 
 export default function Ticker() {

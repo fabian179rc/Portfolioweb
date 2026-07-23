@@ -13,28 +13,28 @@ export default function Hero() {
             className={revealClass(isVisible, "hero__line")}
             style={{ transitionDelay: "0.1s" }}
           >
-            Sitios web
+            Dejá de explicar
           </span>
           <span
             className={revealClass(isVisible, "hero__line")}
             style={{ transitionDelay: "0.25s" }}
           >
-            que convierten.
+            lo mismo veinte veces.
           </span>
           <span
             className={revealClass(isVisible, "hero__line")}
             style={{ transitionDelay: "0.4s" }}
           >
-            Hechos a mano.
+            Que tu página lo haga por vos.
           </span>
         </h1>
         <p
           className={revealClass(isVisible, "hero__subtitle")}
           style={{ transitionDelay: "0.55s" }}
         >
-          Un estudio privado que diseña y desarrolla experiencias digitales a
-          medida para negocios en Argentina y Latinoamérica. Sin plantillas. Sin
-          intermediarios.
+          Una página que explica, genera confianza y lleva al cliente a tu
+          WhatsApp ya decidido. Diseño y desarrollo web a medida para
+          negocios en Argentina.
         </p>
         <div
           className={revealClass(isVisible, "hero__ctas")}
