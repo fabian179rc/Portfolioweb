@@ -3,11 +3,11 @@ import { CONTACT, WEB3FORMS_ACCESS_KEY } from "../data/config";
 import { useScrollReveal, revealClass } from "../hooks/useScrollReveal";
 
 const TIPOS_PROYECTO = [
-  "Sitio de Marca Completo",
-  "Landing Page de Captación",
-  // "E-commerce",
+  "Landing de Captación",
+  "Sitio de Marca",
   "Rediseño y Optimización",
-  "Mantenimiento y Soporte",
+  // "E-commerce",
+  "Sitio Institucional Completo",
 ];
 
 export default function Contacto() {
